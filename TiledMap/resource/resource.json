@@ -1,0 +1,37 @@
+{
+	"groups":[
+	{
+		"keys":"bgImage,egretIcon",
+		"name":"preload"
+	},
+	{
+		"keys":"simples_pimples_png,map01_json",
+		"name":"map01"
+	}],
+	"resources":[
+	{
+		"name":"bgImage",
+		"type":"image",
+		"url":"assets/bg.jpg"
+	},
+	{
+		"name":"egretIcon",
+		"type":"image",
+		"url":"assets/egret_icon.png"
+	},
+	{
+		"name":"description",
+		"type":"json",
+		"url":"config/description.json"
+	},
+	{
+		"name":"simples_pimples_png",
+		"type":"image",
+		"url":"map/simples_pimples.png"
+	},
+	{
+		"name":"map01_json",
+		"type":"json",
+		"url":"map/map01.json"
+	}]
+}
