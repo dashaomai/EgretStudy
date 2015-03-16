@@ -30,50 +30,23 @@ var __extends = this.__extends || function (d, b) {
     __.prototype = b.prototype;
     d.prototype = new __();
 };
-var egret;
-(function (egret) {
-    /**
-     * @class egret.Shape
-     * @classdesc 此类用于使用 Egret 绘图应用程序编程接口 (API) 创建简单形状。Shape 类包括 graphics 属性，该属性使您可以从 Graphics 类访问方法。
-     * @link http://docs.egret-labs.org/demo/shape.html Shape绘制矢量图
-     */
-    var Shape = (function (_super) {
-        __extends(Shape, _super);
-        /**
-         * 创建一个 egret.Shape 对象
-         */
-        function Shape() {
-            _super.call(this);
-            this._graphics = null;
-        }
-        Object.defineProperty(Shape.prototype, "graphics", {
-            /**
-             * 获取 Shape 中的 Graphics 对象。
-             * @member {egret.Graphics} egret.Shape#graphics
-             */
-            get: function () {
-                if (!this._graphics) {
-                    this._graphics = new egret.Graphics();
-                    this.needDraw = true;
-                }
-                return this._graphics;
-            },
-            enumerable: true,
-            configurable: true
-        });
-        Shape.prototype._render = function (renderContext) {
-            if (this._graphics)
-                this._graphics._draw(renderContext);
-        };
-        Shape.prototype._measureBounds = function () {
-            var graphics = this._graphics;
-            if (!graphics) {
-                return _super.prototype._measureBounds.call(this);
-            }
-            return graphics._measureBounds();
-        };
-        return Shape;
-    })(egret.DisplayObject);
-    egret.Shape = Shape;
-    Shape.prototype.__class__ = "egret.Shape";
-})(egret || (egret = {}));
+var LoadingUI = (function (_super) {
+    __extends(LoadingUI, _super);
+    function LoadingUI() {
+        _super.call(this);
+        this.createView();
+    }
+    LoadingUI.prototype.createView = function () {
+        this.textField = new egret.TextField();
+        this.addChild(this.textField);
+        this.textField.y = 300;
+        this.textField.width = 480;
+        this.textField.height = 100;
+        this.textField.textAlign = "center";
+    };
+    LoadingUI.prototype.setProgress = function (current, total) {
+        this.textField.text = "Loading..." + current + "/" + total;
+    };
+    return LoadingUI;
+})(egret.Sprite);
+//# sourceMappingURL=LoadingUI.js.map

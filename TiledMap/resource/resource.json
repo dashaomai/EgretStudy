@@ -5,8 +5,8 @@
 		"name":"preload"
 	},
 	{
-		"keys":"simples_pimples_png,map01_json",
-		"name":"map01"
+		"keys":"simples_pimples_png,map01_json,map02_json",
+		"name":"map"
 	}],
 	"resources":[
 	{
@@ -33,5 +33,10 @@
 		"name":"map01_json",
 		"type":"json",
 		"url":"map/map01.json"
+	},
+	{
+		"name":"map02_json",
+		"type":"json",
+		"url":"map/map02.json"
 	}]
 }

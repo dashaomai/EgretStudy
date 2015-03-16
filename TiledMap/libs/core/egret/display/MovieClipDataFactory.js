@@ -42,7 +42,7 @@ var egret;
         __extends(MovieClipDataFactory, _super);
         /**
          * 创建一个 egret.MovieClipDataFactory 对象
-         * @param movieClipDataSet {any} MovieClip数据集
+         * @param movieClipDataSet {any} MovieClip数据集，该数据集必须由Egret官方工具生成
          * @param texture {Texture} 纹理
          */
         function MovieClipDataFactory(movieClipDataSet, texture) {

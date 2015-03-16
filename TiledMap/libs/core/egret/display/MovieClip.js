@@ -201,7 +201,7 @@ var egret;
         /**
          * 继续播放当前动画
          * @method egret.MovieClip#play
-         * @param playTimes {number} 播放次数。 参数为整数，可选参数，>=1：设定播放次数，<0：循环播放，默认值 0：不改变播放次数，
+         * @param playTimes {number} 播放次数。 参数为整数，可选参数，>=1：设定播放次数，<0：循环播放，默认值 0：不改变播放次数(MovieClip初始播放次数设置为1)，
          */
         MovieClip.prototype.play = function (playTimes) {
             if (playTimes === void 0) { playTimes = 0; }
@@ -220,7 +220,7 @@ var egret;
             this.setIsStopped(true);
         };
         /**
-         * 将播放头移到前帧并停止
+         * 将播放头移到前一帧并停止
          * @method egret.MovieClip#prevFrame
          */
         MovieClip.prototype.prevFrame = function () {

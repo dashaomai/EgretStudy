@@ -56,7 +56,7 @@ var egret;
         }
         Object.defineProperty(HTTPStatusEvent.prototype, "status", {
             /**
-             * 由服务器返回的 HTTP 状态代码。【只读】
+             * 由服务器返回的 HTTP 状态代码。
              * @type {number}
              * @private
              */

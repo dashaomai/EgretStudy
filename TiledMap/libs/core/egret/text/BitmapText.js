@@ -103,7 +103,7 @@ var egret;
             this.textLinesChange = true;
         };
         BitmapText.prototype._render = function (renderContext) {
-            var textLines = this.getTextLines();
+            var textLines = this._getTextLines();
             var length = textLines.length;
             if (length == 0) {
                 return;
@@ -145,13 +145,13 @@ var egret;
             this._texture_to_render = null;
         };
         BitmapText.prototype._measureBounds = function () {
-            var lines = this.getTextLines();
+            var lines = this._getTextLines();
             if (lines.length == 0) {
                 return egret.Rectangle.identity.initialize(0, 0, 0, 0);
             }
             return egret.Rectangle.identity.initialize(this._textOffsetX, this._textOffsetY, this._textWidth - this._textOffsetX, this._textHeight - this._textOffsetY);
         };
-        BitmapText.prototype.getTextLines = function () {
+        BitmapText.prototype._getTextLines = function () {
             if (!this.textLinesChange) {
                 return this._textLines;
             }

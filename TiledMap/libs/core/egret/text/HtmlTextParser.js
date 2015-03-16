@@ -107,6 +107,12 @@ var egret;
                 case "color":
                     info.textColor = parseInt(valueArr[1]);
                     break;
+                case "strokecolor":
+                    info.strokeColor = parseInt(valueArr[1]);
+                    break;
+                case "stroke":
+                    info.stroke = parseInt(valueArr[1]);
+                    break;
                 case "b":
                     info.bold = (valueArr[1] || "true") == "true";
                     break;

@@ -228,13 +228,13 @@ module tiledmap {
                         objTile = new ObjectTile();
                         //objTile.tid = tileData[j] ? tileData[j].tid : tid++;
                         objTile.x = obj.x / tileWidth;
-                        objTile.y = obj.y / tileHeight;       // object 类型的 y 坐标是不对的，要上移一砖
+                        objTile.y = obj.y / tileHeight - 1;       // object 类型的 y 坐标是不对的，要上移一砖
                         objTile.type = obj.type;
                         objTile.properties = obj.properties;
 
-                        tileData[j] = objTile;
-
                         idx = this.getIndexOfPosXY(objTile.x, objTile.y);
+
+                        tileData[idx] = objTile;
 
                         // 对 walkingData 的砖块类型进行覆盖式更新
                         walkByte = walkingData[idx];
@@ -291,7 +291,7 @@ module tiledmap {
                     for (j=vPos, n=vPos + cross; j<n; j++) {
                         // 前一列不能往右走
                         if (hPos > 0)
-                            walkingData[hPos + (j - 1) * hTileCount] &= ~Map.RIGHT;
+                            walkingData[hPos + j * hTileCount - 1] &= ~Map.RIGHT;
                         // 当前列不能往左走
                         walkingData[hPos + j * hTileCount] &= ~Map.LEFT;
                     }
@@ -308,7 +308,7 @@ module tiledmap {
          * @returns {number}
          */
         private getIndexOfPosXY(x:number, y:number):number {
-            return y * this.tileWidth + x;
+            return y * this.width + x;
         }
     }
 }

@@ -41,6 +41,8 @@ var egret;
             this.strokeStyleColor = null;
             this.fillStyleColor = null;
             this._dirty = false;
+            this.lineX = 0;
+            this.lineY = 0;
             this._firstCheck = true;
             this._minX = 0;
             this._minY = 0;

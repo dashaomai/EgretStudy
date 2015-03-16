@@ -1,3 +1,6 @@
+declare module egret {
+    var egret_string_code: {};
+}
 /**
  * Copyright (c) 2014,Egret-Labs.org
  * All rights reserved.
@@ -73,7 +76,6 @@ declare module egret {
          */
         private static getTraceCode(type, actionCode, value);
     }
-    var egret_string_code: {};
     function getString(id: number, ...args: any[]): string;
 }
 /**
@@ -643,7 +645,7 @@ declare module egret {
         constructor(type: string, bubbles?: boolean, cancelable?: boolean);
         private _status;
         /**
-         * 由服务器返回的 HTTP 状态代码。【只读】
+         * 由服务器返回的 HTTP 状态代码。
          * @type {number}
          * @private
          */
@@ -3003,10 +3005,17 @@ declare module egret {
          */
         static ADD: string;
         /**
-         * 根据显示对象的 Alpha 值擦除背景。
+         * 根据显示对象的 Alpha 值擦除背景。Alpha 值不为0的区域将被擦除。
          * @constant {string} egret.BlendMode.ERASE
+         * @private
          */
         static ERASE: string;
+        /**
+         * 根据显示对象的 Alpha 值擦除背景。Alpha 值为0的区域将被擦除。
+         * 注意：由于 CanvasAPI 的限制，只会保留 Alpha 值不为1的区域。
+         * @constant {string} egret.BlendMode.ERASE
+         */
+        static ERASE_REVERSE: string;
     }
 }
 /**
@@ -3080,7 +3089,7 @@ declare module egret {
         _texture_to_render: Texture;
         _parent: DisplayObjectContainer;
         /**
-         * 表示包含此显示对象的 DisplayObjectContainer 对象。【只读】
+         * 表示包含此显示对象的 DisplayObjectContainer 对象。
          * 使用 parent 属性可以指定高于显示列表层次结构中当前显示对象的显示对象的相对路径。
          * @member {egret.DisplayObjectContainer} egret.DisplayObject#parent
          */
@@ -3383,7 +3392,7 @@ declare module egret {
         _onRemoveFromStage(): void;
         _stage: Stage;
         /**
-         * 显示对象的舞台。【只读】
+         * 显示对象的舞台。
          * 例如，您可以创建多个显示对象并加载到显示列表中，每个显示对象的 stage 属性是指相同的 Stage 对象。
          * 如果显示对象未添加到显示列表，则其 stage 属性会设置为 null。
          * @member {number} egret.DisplayObject#stage
@@ -3480,7 +3489,7 @@ declare module egret {
         touchChildren: boolean;
         _children: Array<DisplayObject>;
         /**
-         * 返回此对象的子项数目。【只读】
+         * 返回此对象的子项数目。
          * @member {number} egret.DisplayObjectContainer#numChildren
          */
         numChildren: number;
@@ -4142,7 +4151,7 @@ declare module egret {
          * @member {string} egret.BitmapText#text
          */
         text: string;
-        private _font;
+        _font: BitmapFont;
         private _fontChanged;
         /**
          * BitmapFont对象，缓存了所有文本的位图纹理
@@ -4150,7 +4159,7 @@ declare module egret {
          */
         font: BitmapFont;
         _setSizeDirty(): void;
-        private static EMPTY_FACTOR;
+        static EMPTY_FACTOR: number;
         _render(renderContext: RendererContext): void;
         _measureBounds(): egret.Rectangle;
         private _textWidth;
@@ -4159,8 +4168,8 @@ declare module egret {
         private _textOffsetY;
         private textLinesChange;
         private _textLines;
-        private _lineHeights;
-        private getTextLines();
+        _lineHeights: Array<number>;
+        _getTextLines(): Array<string>;
     }
 }
 /**
@@ -4204,6 +4213,8 @@ declare module egret {
         private strokeStyleColor;
         private fillStyleColor;
         private _dirty;
+        private lineX;
+        private lineY;
         constructor();
         /**
          * 指定一种简单的单一颜色填充，在绘制时该填充将在随后对其他 Graphics 方法（如 lineTo() 或 drawCircle()）的调用中使用。
@@ -4351,7 +4362,7 @@ declare module egret {
         constructor();
         private _graphics;
         /**
-         * 获取 Shape 中的 Graphics 对象。【只读】
+         * 获取 Shape 中的 Graphics 对象。
          * @member {egret.Graphics} egret.Shape#graphics
          */
         graphics: Graphics;
@@ -4399,7 +4410,7 @@ declare module egret {
         constructor();
         private _graphics;
         /**
-         * 获取 Sprite 中的 Graphics 对象。【只读】
+         * 获取 Sprite 中的 Graphics 对象。
          * 指定属于此 sprite 的 Graphics 对象，在此 sprite 中可执行矢量绘图命令。
          * @member {egret.Graphics} egret.Sprite#graphics
          */
@@ -4595,7 +4606,7 @@ declare module egret {
         _getLineHeight(): number;
         _numLines: number;
         /**
-         * 文本行数。【只读】
+         * 文本行数。
          * @member {number} egret.TextField#numLines
          */
         numLines: number;
@@ -5080,7 +5091,7 @@ declare module egret {
         /**
          * 继续播放当前动画
          * @method egret.MovieClip#play
-         * @param playTimes {number} 播放次数。 参数为整数，可选参数，>=1：设定播放次数，<0：循环播放，默认值 0：不改变播放次数，
+         * @param playTimes {number} 播放次数。 参数为整数，可选参数，>=1：设定播放次数，<0：循环播放，默认值 0：不改变播放次数(MovieClip初始播放次数设置为1)，
          */
         play(playTimes?: number): void;
         /**
@@ -5089,7 +5100,7 @@ declare module egret {
          */
         stop(): void;
         /**
-         * 将播放头移到前帧并停止
+         * 将播放头移到前一帧并停止
          * @method egret.MovieClip#prevFrame
          */
         prevFrame(): void;
@@ -5343,7 +5354,7 @@ declare module egret {
         _mcDataCache: any;
         /**
          * 创建一个 egret.MovieClipDataFactory 对象
-         * @param movieClipDataSet {any} MovieClip数据集
+         * @param movieClipDataSet {any} MovieClip数据集，该数据集必须由Egret官方工具生成
          * @param texture {Texture} 纹理
          */
         constructor(movieClipDataSet?: any, texture?: Texture);
@@ -6367,7 +6378,6 @@ declare module egret {
  */
 declare module egret {
     /**
-     * @private
      */
     class ExternalInterface {
         constructor();

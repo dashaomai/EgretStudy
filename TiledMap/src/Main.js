@@ -54,7 +54,7 @@ var Main = (function (_super) {
         RES.addEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR, this.onResourceLoadError, this);
         RES.addEventListener(RES.ResourceEvent.GROUP_PROGRESS, this.onResourceProgress, this);
         RES.loadGroup("preload");
-        RES.loadGroup('map');
+        RES.loadGroup('map01');
     };
     /**
      * preload资源组加载完成
@@ -62,7 +62,7 @@ var Main = (function (_super) {
     Main.prototype.onResourceLoadComplete = function (event) {
         switch (event.groupName) {
             case 'preload':
-            case 'map':
+            case 'map01':
                 this.preloadCount++;
                 break;
         }
@@ -102,4 +102,4 @@ var Main = (function (_super) {
     };
     return Main;
 })(egret.DisplayObjectContainer);
-Main.prototype.__class__ = "Main";
+//# sourceMappingURL=Main.js.map

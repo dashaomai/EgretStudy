@@ -884,6 +884,11 @@ declare module RES {
      */
     function setMaxLoadingThread(thread: number): void;
     /**
+     * 设置资源加载失败时的重试次数，默认值是 3。
+     * @param retry 要设置的重试次数。
+     */
+    function setMaxRetryTimes(retry: number): void;
+    /**
      * 添加事件侦听器,参考ResourceEvent定义的常量。
      * @method RES.addEventListener
      * @param type {string} 事件的类型。

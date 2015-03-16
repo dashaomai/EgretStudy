@@ -57,7 +57,7 @@ class Main extends egret.DisplayObjectContainer {
         RES.addEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR, this.onResourceLoadError, this);
         RES.addEventListener(RES.ResourceEvent.GROUP_PROGRESS, this.onResourceProgress, this);
         RES.loadGroup("preload");
-        RES.loadGroup('map01');
+        RES.loadGroup('map');
     }
     /**
      * preload资源组加载完成
@@ -65,7 +65,7 @@ class Main extends egret.DisplayObjectContainer {
     private onResourceLoadComplete(event: RES.ResourceEvent): void {
         switch (event.groupName) {
             case 'preload':
-            case 'map01':
+            case 'map':
                 this.preloadCount ++;
                 break;
         }

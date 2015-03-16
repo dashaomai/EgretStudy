@@ -68,7 +68,7 @@ var egret;
         });
         Object.defineProperty(DisplayObjectContainer.prototype, "numChildren", {
             /**
-             * 返回此对象的子项数目。【只读】
+             * 返回此对象的子项数目。
              * @member {number} egret.DisplayObjectContainer#numChildren
              */
             get: function () {
@@ -308,36 +308,37 @@ var egret;
                 return;
             }
             if (o._filter) {
-                egret.RenderCommand.push(this._setGlobalFilter, this);
+                egret.RenderCommand.push(o._setGlobalFilter, o);
             }
             if (o._colorTransform) {
-                egret.RenderCommand.push(this._setGlobalColorTransform, this);
+                egret.RenderCommand.push(o._setGlobalColorTransform, o);
             }
             var mask = o.mask || o._scrollRect;
             if (mask) {
-                egret.RenderCommand.push(this._pushMask, this);
+                egret.RenderCommand.push(o._pushMask, o);
             }
             _super.prototype._updateTransform.call(this);
-            if (!this["_cacheAsBitmap"] || !this._texture_to_render) {
-                for (var i = 0, length = o._children.length; i < length; i++) {
-                    var child = o._children[i];
+            if (!o["_cacheAsBitmap"] || !o._texture_to_render) {
+                for (var i = 0, children = o._children, length = children.length; i < length; i++) {
+                    var child = children[i];
                     child._updateTransform();
                 }
             }
             if (mask) {
-                egret.RenderCommand.push(this._popMask, this);
+                egret.RenderCommand.push(o._popMask, o);
             }
             if (o._colorTransform) {
-                egret.RenderCommand.push(this._removeGlobalColorTransform, this);
+                egret.RenderCommand.push(o._removeGlobalColorTransform, o);
             }
             if (o._filter) {
-                egret.RenderCommand.push(this._removeGlobalFilter, this);
+                egret.RenderCommand.push(o._removeGlobalFilter, o);
             }
         };
         DisplayObjectContainer.prototype._render = function (renderContext) {
             if (!egret.MainContext.__use_new_draw) {
-                for (var i = 0, length = this._children.length; i < length; i++) {
-                    var child = this._children[i];
+                var o = this;
+                for (var i = 0, children = o._children, length = children.length; i < length; i++) {
+                    var child = children[i];
                     child._draw(renderContext);
                 }
             }
@@ -348,10 +349,12 @@ var egret;
          * @private
          */
         DisplayObjectContainer.prototype._measureBounds = function () {
+            var o = this;
             var minX = 0, maxX = 0, minY = 0, maxY = 0;
-            var l = this._children.length;
+            var children = o._children;
+            var l = children.length;
             for (var i = 0; i < l; i++) {
-                var child = this._children[i];
+                var child = children[i];
                 if (!child._visible) {
                     continue;
                 }
@@ -389,23 +392,24 @@ var egret;
          */
         DisplayObjectContainer.prototype.hitTest = function (x, y, ignoreTouchEnabled) {
             if (ignoreTouchEnabled === void 0) { ignoreTouchEnabled = false; }
+            var o = this;
             var result;
-            if (!this._visible) {
+            if (!o._visible) {
                 return null;
             }
-            if (this._scrollRect) {
-                if (x < this._scrollRect.x || y < this._scrollRect.y || x > this._scrollRect.x + this._scrollRect.width || y > this._scrollRect.y + this._scrollRect.height) {
+            if (o._scrollRect) {
+                if (x < o._scrollRect.x || y < o._scrollRect.y || x > o._scrollRect.x + o._scrollRect.width || y > o._scrollRect.y + o._scrollRect.height) {
                     return null;
                 }
             }
-            else if (this.mask) {
-                if (this.mask.x > x || x > this.mask.x + this.mask.width || this.mask.y > y || y > this.mask.y + this.mask.height) {
+            else if (o.mask) {
+                if (o.mask.x > x || x > o.mask.x + o.mask.width || o.mask.y > y || y > o.mask.y + o.mask.height) {
                     return null;
                 }
             }
-            var children = this._children;
+            var children = o._children;
             var l = children.length;
-            var touchChildren = this._touchChildren; //这里不用考虑父级的touchChildren，从父级调用下来过程中已经判断过了。
+            var touchChildren = o._touchChildren; //这里不用考虑父级的touchChildren，从父级调用下来过程中已经判断过了。
             for (var i = l - 1; i >= 0; i--) {
                 var child = children[i];
                 var mtx = child._getMatrix();
@@ -418,35 +422,39 @@ var egret;
                 var childHitTestResult = child.hitTest(point.x, point.y, true);
                 if (childHitTestResult) {
                     if (!touchChildren) {
-                        return this;
+                        return o;
                     }
                     if (childHitTestResult._touchEnabled && touchChildren) {
                         return childHitTestResult;
                     }
-                    result = this;
+                    result = o;
                 }
             }
             if (result) {
                 return result;
             }
-            else if (this._texture_to_render) {
+            else if (o._texture_to_render) {
                 return _super.prototype.hitTest.call(this, x, y, ignoreTouchEnabled);
             }
             return null;
         };
         DisplayObjectContainer.prototype._onAddToStage = function () {
+            var o = this;
             _super.prototype._onAddToStage.call(this);
-            var length = this._children.length;
+            var children = o._children;
+            var length = children.length;
             for (var i = 0; i < length; i++) {
                 var child = this._children[i];
                 child._onAddToStage();
             }
         };
         DisplayObjectContainer.prototype._onRemoveFromStage = function () {
+            var o = this;
             _super.prototype._onRemoveFromStage.call(this);
-            var length = this._children.length;
+            var children = o._children;
+            var length = children.length;
             for (var i = 0; i < length; i++) {
-                var child = this._children[i];
+                var child = children[i];
                 child._onRemoveFromStage();
             }
         };
