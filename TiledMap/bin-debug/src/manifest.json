@@ -1,13 +1,13 @@
 [
-	"com\\clevercells\\venture\\tiledmap\\Utils.ts",
-	"com\\clevercells\\venture\\tiledmap\\Object.ts",
-	"com\\clevercells\\venture\\tiledmap\\Layer.ts",
-	"com\\clevercells\\venture\\tiledmap\\ObjectGroup.ts",
-	"com\\clevercells\\venture\\tiledmap\\Tile.ts",
-	"com\\clevercells\\venture\\tiledmap\\TileSet.ts",
-	"com\\clevercells\\venture\\tiledmap\\Map.ts",
+	"com/clevercells/venture/tiledmap/Utils.ts",
+	"com/clevercells/venture/tiledmap/Object.ts",
+	"com/clevercells/venture/tiledmap/Layer.ts",
+	"com/clevercells/venture/tiledmap/ObjectGroup.ts",
+	"com/clevercells/venture/tiledmap/Tile.ts",
+	"com/clevercells/venture/tiledmap/TileSet.ts",
+	"com/clevercells/venture/tiledmap/Map.ts",
 	"LoadingUI.ts",
-	"com\\clevercells\\venture\\tiledmap\\MapView.ts",
-	"com\\clevercells\\venture\\tiledmap\\TiledMapParser.ts",
+	"com/clevercells/venture/tiledmap/MapView.ts",
+	"com/clevercells/venture/tiledmap/TiledMapParser.ts",
 	"Main.ts"
 ]
