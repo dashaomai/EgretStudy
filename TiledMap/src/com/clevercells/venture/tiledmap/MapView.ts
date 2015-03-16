@@ -38,6 +38,9 @@ module tiledmap {
                     for (k=0, l=ts.hTileCount; k<l; k++) {
                         id ++;
 
+                        if (!map.usedTileSetIds[id])
+                            continue;
+
                         rect = ts.getRectangleByTileId(id);
 
                         if (!rect) {

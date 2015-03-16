@@ -8,18 +8,6 @@ var tiledmap;
             if (!tiledmap.hasProperties(param, 'version', 'orientation', 'renderorder', 'width', 'height', 'tilewidth', 'tileheight', 'nextobjectid', 'tilesets', 'layers'))
                 return;
             tiledmap.copyProperties(this, param, ['version', 'orientation', 'renderOrder', 'width', 'height', 'tileWidth', 'tileHeight', 'nextObjectId'], ['version', 'orientation', 'renderorder', 'width', 'height', 'tilewidth', 'tileheight', 'nextobjectid']);
-            //this.version = parseInt(param['version']);
-            //
-            //this.orientation = param['orientation'];
-            //this.renderOrder = param['renderorder'];
-            //
-            //this.width = parseInt(param['width']);
-            //this.height = parseInt(param['height']);
-            //
-            //this.tileWidth = parseInt(param['tilewidth']);
-            //this.tileHeight = parseInt(param['tileheight']);
-            //
-            //this.nextObjectId = parseInt(param['nextobjectid']);
             this.tileSets = [];
             this.layers = [];
             this.objectGroups = [];
@@ -56,6 +44,10 @@ var tiledmap;
                 this.walkingData = [];
             else
                 this.walkingData.length = this.width * this.height;
+            if (!this.usedTileSetIds)
+                this.usedTileSetIds = [];
+            else
+                this.usedTileSetIds.length = 0;
             // 将 this.tileData 短路成本地变量
             var tileData;
             tileData = this.tileData;
@@ -74,12 +66,14 @@ var tiledmap;
             var hTileCount;
             hTileCount = this.width;
             var walkByte;
+            var tileSetId;
             for (i = 0, m = this.layers.length; i < m; i++) {
                 layer = this.layers[i];
                 for (j = 0, n = layer.tileIds.length; j < n; j++) {
                     vPos = Math.floor(j / hTileCount);
                     hPos = j - vPos * hTileCount;
-                    if (layer.tileIds[j] !== 0) {
+                    tileSetId = layer.tileIds[j];
+                    if (tileSetId !== 0) {
                         tile = new tiledmap.Tile();
                         //tile.tid = tileData[j] ? tileData[j].tid : tid++;
                         tile.x = hPos;
@@ -114,6 +108,11 @@ var tiledmap;
                             }
                         }
                         walkingData[j] = walkByte;
+                        // 记录当前格所使用的 tileSet 纹理 id
+                        this.usedTileSetIds[tileSetId] = true;
+                    }
+                    else {
+                        this.usedTileSetIds[tileSetId] = false;
                     }
                 }
             }
@@ -148,6 +147,7 @@ var tiledmap;
                         // TODO: type 要改为从数值表读取
                         walkByte |= tiledmap.getTypeByString(obj.type);
                         walkingData[idx] = walkByte;
+                        this.usedTileSetIds[obj.globalId] = true;
                     }
                     else if ((obj.width === 0 && obj.height > 0) || (obj.width > 0 && obj.height === 0)) {
                         // 内墙对象先添加到相关数组里，为之后 walkingData 数组 patch 而使用

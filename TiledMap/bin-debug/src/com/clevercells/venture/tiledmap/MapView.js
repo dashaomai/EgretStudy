@@ -34,6 +34,8 @@ var tiledmap;
                 for (j = 0, n = ts.vTileCount; j < n; j++) {
                     for (k = 0, l = ts.hTileCount; k < l; k++) {
                         id++;
+                        if (!map.usedTileSetIds[id])
+                            continue;
                         rect = ts.getRectangleByTileId(id);
                         if (!rect) {
                             egret.Logger.info('x = ' + k + ', y = ' + j + ', rect = ' + rect);

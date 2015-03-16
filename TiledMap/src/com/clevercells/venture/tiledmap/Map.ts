@@ -31,6 +31,13 @@ module tiledmap {
         public tileData:Tile[];
         public walkingData:number[];
 
+        // 当前地图渲染所需的 TileSet 纹理 id 记录。
+        // 每一格 TileSet 纹理都会生成独一无二的 global 纹理 id。
+        // 这个数组按纹理 id 为下标，记录当前地图是否用到了某个 id 对应的纹理。
+        // 以便在地图渲染时，只生成用到的纹理 id 对应的 RenderTexture。
+        // 减少纹理数量，优化内存和效率。
+        public usedTileSetIds:boolean[];
+
         public constructor(param:any) {
             if (!hasProperties(
                     param,
@@ -57,20 +64,6 @@ module tiledmap {
                     'width', 'height', 'tilewidth', 'tileheight',
                     'nextobjectid']
             );
-
-
-            //this.version = parseInt(param['version']);
-            //
-            //this.orientation = param['orientation'];
-            //this.renderOrder = param['renderorder'];
-            //
-            //this.width = parseInt(param['width']);
-            //this.height = parseInt(param['height']);
-            //
-            //this.tileWidth = parseInt(param['tilewidth']);
-            //this.tileHeight = parseInt(param['tileheight']);
-            //
-            //this.nextObjectId = parseInt(param['nextobjectid']);
 
             this.tileSets = [];
             this.layers = [];
@@ -119,6 +112,11 @@ module tiledmap {
             else
                 this.walkingData.length = this.width * this.height;
 
+            if (!this.usedTileSetIds)
+                this.usedTileSetIds = [];
+            else
+                this.usedTileSetIds.length = 0;
+
             // 将 this.tileData 短路成本地变量
             var tileData:Tile[];
             tileData = this.tileData;
@@ -147,6 +145,8 @@ module tiledmap {
 
             var walkByte:number;
 
+            var tileSetId:number;
+
             for (i=0, m=this.layers.length; i<m; i++) {
                 layer = this.layers[i];
 
@@ -155,7 +155,9 @@ module tiledmap {
                     vPos = Math.floor(j / hTileCount);
                     hPos = j - vPos * hTileCount;
 
-                    if (layer.tileIds[j] !== 0) {
+                    tileSetId = layer.tileIds[j];
+
+                    if (tileSetId !== 0) {
                         tile = new Tile();
                         //tile.tid = tileData[j] ? tileData[j].tid : tid++;
                         tile.x = hPos;
@@ -197,6 +199,11 @@ module tiledmap {
                         }
 
                         walkingData[j] = walkByte;
+
+                        // 记录当前格所使用的 tileSet 纹理 id
+                        this.usedTileSetIds[tileSetId] = true;
+                    } else {
+                        this.usedTileSetIds[tileSetId] = false;
                     }
                 }
             }
@@ -246,6 +253,8 @@ module tiledmap {
                         walkByte |= getTypeByString(obj.type);
 
                         walkingData[idx] = walkByte;
+
+                        this.usedTileSetIds[obj.globalId] = true;
                     } else if ((obj.width === 0 && obj.height > 0) || (obj.width > 0 && obj.height === 0)) {
                         // 内墙对象先添加到相关数组里，为之后 walkingData 数组 patch 而使用
                         innerWalls.push(obj);
