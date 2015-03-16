@@ -145,7 +145,7 @@ var tiledmap;
                         if (walkByte === 0)
                             throw new Error('居然把对象放在无砖块的格子里了！');
                         // TODO: type 要改为从数值表读取
-                        walkByte |= tiledmap.getTypeByString(obj.type);
+                        walkByte |= (tiledmap.getTypeByString(obj.type) << 4);
                         walkingData[idx] = walkByte;
                         this.usedTileSetIds[obj.globalId] = true;
                     }

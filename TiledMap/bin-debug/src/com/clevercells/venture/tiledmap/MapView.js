@@ -91,6 +91,51 @@ var tiledmap;
                     }
                 }
             }
+            // 根据 walkingData 内的可行走方向，把墙画出来
+            var walkingData = map.walkingData;
+            var walkByte;
+            var wall = new egret.Shape();
+            var g = wall.graphics;
+            var tileWidth, tileHeight;
+            tileWidth = map.tileWidth;
+            tileHeight = map.tileHeight;
+            var hPos, vPos;
+            var tileX, tileY;
+            var wallWidth = 2;
+            var halfOfWallWidth = wallWidth / 2;
+            var wallColor = 0xFFFF00;
+            g.lineStyle(wallWidth, wallColor);
+            for (i = 0, m = walkingData.length; i < m; i++) {
+                walkByte = walkingData[i];
+                if (walkByte === 0)
+                    continue;
+                vPos = Math.floor(i / map.width);
+                hPos = i - vPos * map.width;
+                tileX = hPos * tileWidth;
+                tileY = vPos * tileHeight;
+                // 绘制砖块的右墙
+                if ((walkByte & tiledmap.Map.RIGHT) === 0) {
+                    g.moveTo(tileX + tileWidth - wallWidth, tileY);
+                    g.lineTo(tileX + tileWidth - wallWidth, tileY + tileHeight - wallWidth);
+                }
+                // 上墙
+                if ((walkByte & tiledmap.Map.UP) === 0) {
+                    g.moveTo(tileX, tileY + halfOfWallWidth);
+                    g.lineTo(tileX + tileWidth - wallWidth, tileY + halfOfWallWidth);
+                }
+                // 左墙
+                if ((walkByte & tiledmap.Map.LEFT) === 0) {
+                    g.moveTo(tileX + halfOfWallWidth, tileY);
+                    g.lineTo(tileX + halfOfWallWidth, tileY + tileHeight - wallWidth);
+                }
+                // 下墙
+                if ((walkByte & tiledmap.Map.DOWN) === 0) {
+                    g.moveTo(tileX, tileY + tileHeight - wallWidth);
+                    g.lineTo(tileX + tileWidth - wallWidth, tileY + tileHeight - wallWidth);
+                }
+            }
+            g.endFill();
+            this.addChild(wall);
         }
         return MapView;
     })(egret.DisplayObjectContainer);

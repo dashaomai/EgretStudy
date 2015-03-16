@@ -250,7 +250,7 @@ module tiledmap {
                             throw new Error('居然把对象放在无砖块的格子里了！');
 
                         // TODO: type 要改为从数值表读取
-                        walkByte |= getTypeByString(obj.type);
+                        walkByte |= (getTypeByString(obj.type) << 4);
 
                         walkingData[idx] = walkByte;
 

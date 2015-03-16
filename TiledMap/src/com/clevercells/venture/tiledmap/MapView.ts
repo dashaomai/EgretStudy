@@ -112,6 +112,65 @@ module tiledmap {
                     }
                 }
             }
+
+            // 根据 walkingData 内的可行走方向，把墙画出来
+            var walkingData:number[] = map.walkingData;
+            var walkByte:number;
+            var wall:egret.Shape = new egret.Shape();
+            var g:egret.Graphics = wall.graphics;
+
+            var tileWidth:number, tileHeight:number;
+            tileWidth = map.tileWidth;
+            tileHeight = map.tileHeight;
+
+            var hPos:number, vPos:number;
+            var tileX:number, tileY:number;
+
+            var wallWidth:number = 2;
+            var halfOfWallWidth:number = wallWidth / 2;
+            var wallColor:number = 0xFFFF00;
+
+            g.lineStyle(wallWidth, wallColor);
+            for (i=0, m=walkingData.length; i<m; i++) {
+                walkByte = walkingData[i];
+
+                if (walkByte === 0)
+                    continue;
+
+                vPos = Math.floor(i / map.width);
+                hPos = i - vPos * map.width;
+
+                tileX = hPos * tileWidth;
+                tileY = vPos * tileHeight;
+
+                // 绘制砖块的右墙
+                if ((walkByte & Map.RIGHT) === 0) {
+                    g.moveTo(tileX + tileWidth - wallWidth, tileY);
+                    g.lineTo(tileX + tileWidth - wallWidth, tileY + tileHeight - wallWidth);
+                }
+
+                // 上墙
+                if ((walkByte & Map.UP) === 0) {
+                    g.moveTo(tileX, tileY + halfOfWallWidth);
+                    g.lineTo(tileX + tileWidth - wallWidth, tileY + halfOfWallWidth);
+                }
+
+                // 左墙
+                if ((walkByte & Map.LEFT) === 0) {
+                    g.moveTo(tileX + halfOfWallWidth, tileY);
+                    g.lineTo(tileX + halfOfWallWidth, tileY + tileHeight - wallWidth);
+                }
+
+                // 下墙
+                if ((walkByte & Map.DOWN) === 0) {
+                    g.moveTo(tileX, tileY + tileHeight - wallWidth);
+                    g.lineTo(tileX + tileWidth - wallWidth, tileY + tileHeight - wallWidth);
+                }
+            }
+
+            g.endFill();
+
+            this.addChild(wall);
         }
     }
 }
