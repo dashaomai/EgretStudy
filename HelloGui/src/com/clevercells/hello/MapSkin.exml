@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin width="960" height="640" xmlns:e="http://ns.egret-labs.org/egret" xmlns:w="http://ns.egret-labs.org/wing">
+	<w:HostComponent name="egret.gui.SkinnableComponent"/>
+	<w:Declarations/>
+	<e:states>
+		<e:State name="normal"/>
+		<e:State name="disabled"/>
+	</e:states>
+	<e:Group height="100%" width="100%" left="0" top="0">
+		<e:Button id="nodeA" label="进入迷宫 A" x="370" y="63"/>
+		<e:Button id="nodeB" label="进入迷宫 B" x="207" y="25"/>
+		<e:Button id="nodeC" label="进入迷宫 C" x="402" y="26"/>
+		<e:layout>
+			<e:HorizontalLayout/>
+		</e:layout>
+	</e:Group>
+</e:Skin>
