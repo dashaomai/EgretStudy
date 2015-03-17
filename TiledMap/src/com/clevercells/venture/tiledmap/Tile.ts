@@ -12,6 +12,40 @@ module tiledmap {
         // 基于砖块的坐标（不是基于像素）
         public x:number;
         public y:number;
+
+        // 用于 A* 算法的 parent tid，父砖块 tiledId
+        public parentIndex:number;
+
+        // 用于 A* 算法的几个重要变量
+        public get F():number { return this.G + this.H; }          // = G + H
+        public G:number;                // 路径从起点到该结点时的累计移动消耗
+        public H:number;                // 该结点到终点的预测距离
+
+        // 可行走方向
+        public right:boolean;
+        public up:boolean;
+        public left:boolean;
+        public down:boolean;
+
+        // 在地图里的 index 索引
+        public index:number;
+
+        /**
+         * 为当前砖块结点指定一个路径上的父结点
+         * @param parent
+         */
+        public setParent(parent:Tile):void {
+            this.parentIndex = parent.index;
+            this.G = parent.G + 1;
+        }
+
+        /**
+         * 猜测当前砖块点到目标结点的距离
+         * @param target
+         */
+        public guessDistance(target:Tile):void {
+            this.H = Math.abs(target.x - this.x) + Math.abs(target.y - this.y);
+        }
     }
 
     /**

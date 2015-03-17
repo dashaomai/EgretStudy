@@ -15,6 +15,30 @@ var tiledmap;
     var Tile = (function () {
         function Tile() {
         }
+        Object.defineProperty(Tile.prototype, "F", {
+            // 用于 A* 算法的几个重要变量
+            get: function () {
+                return this.G + this.H;
+            } // = G + H
+            ,
+            enumerable: true,
+            configurable: true
+        });
+        /**
+         * 为当前砖块结点指定一个路径上的父结点
+         * @param parent
+         */
+        Tile.prototype.setParent = function (parent) {
+            this.parentIndex = parent.index;
+            this.G = parent.G + 1;
+        };
+        /**
+         * 猜测当前砖块点到目标结点的距离
+         * @param target
+         */
+        Tile.prototype.guessDistance = function (target) {
+            this.H = Math.abs(target.x - this.x) + Math.abs(target.y - this.y);
+        };
         return Tile;
     })();
     tiledmap.Tile = Tile;

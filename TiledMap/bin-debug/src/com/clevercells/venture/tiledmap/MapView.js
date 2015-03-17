@@ -18,6 +18,9 @@ var tiledmap;
             _super.call(this);
             this.map = map;
             this.drawMap();
+            this.touchEnabled = true;
+            this.touchChildren = false;
+            this.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTapHandler, this);
         }
         /**
          * 绘制地图
@@ -147,6 +150,36 @@ var tiledmap;
             g.endFill();
             wall.cacheAsBitmap = true;
             this.addChild(wall);
+        };
+        MapView.prototype.onTapHandler = function (e) {
+            var posX, posY;
+            posX = Math.floor(e.localX / this.map.tileWidth);
+            posY = Math.floor(e.localY / this.map.tileHeight);
+            //egret.Logger.info('捕获到点击：x = ' + e.localX + ', y = ' + e.localY + ';\t 砖块位置为：x = ' + posX + ', y = ' + posY);
+            var index0, index1;
+            index1 = this.map.getIndexOfPosXY(posX, posY);
+            // 不走去无效的格子
+            if (this.map.walkingData[index1] === 0)
+                return;
+            posX = Math.floor(this.teamAvatar.x / this.map.tileWidth);
+            posY = Math.floor(this.teamAvatar.y / this.map.tileHeight);
+            index0 = this.map.getIndexOfPosXY(posX, posY);
+            this.path = this.map.findPathWithIndexes(index0, index1);
+            // 为按路径行走动画做准备
+            this.passedTime = 0;
+            egret.Ticker.getInstance().register(this.advancedTime, this);
+        };
+        MapView.prototype.advancedTime = function (time) {
+            this.passedTime += time;
+            if (this.passedTime > 300) {
+                var index = this.path.shift();
+                if (!index) {
+                    egret.Ticker.getInstance().unregister(this.advancedTime, this);
+                    return;
+                }
+                this.moveTeamToIndex(index);
+                this.passedTime -= 300;
+            }
         };
         MapView.prototype.addTeam = function (team) {
             if (this.team)

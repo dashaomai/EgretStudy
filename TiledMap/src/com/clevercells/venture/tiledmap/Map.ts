@@ -271,18 +271,7 @@ module tiledmap {
                 }
             }
 
-            // 为所有 tile 计算 tid
-            var tid:number;
-            tid = 0;
-
-            for (i=0, m=this.walkingData.length; i<m; i++) {
-                if (walkingData[i]) {
-                    tileData[i].tid = tid++;
-                }
-            }
-
             // 借内墙数组对 walkingData 进行可行走方向的 patch
-
             var cross:number;       // 某内墙跨越了多少砖块
 
             for (i=0, m=innerWalls.length; i<m; i++) {
@@ -312,6 +301,27 @@ module tiledmap {
                         // 当前列不能往左走
                         walkingData[hPos + j * hTileCount] &= ~Map.LEFT;
                     }
+                }
+            }
+
+            // 为所有 tile 计算 tid 并设置可行走方向信息
+            var tid:number;
+            tid = 0;
+
+            for (i=0, m=this.walkingData.length; i<m; i++) {
+                walkByte = walkingData[i];
+
+                if (walkByte) {
+                    tile = tileData[i];
+
+                    tile.tid = tid++;
+
+                    tile.right = (walkByte & Map.RIGHT) > 0;
+                    tile.up = (walkByte & Map.UP) > 0;
+                    tile.left = (walkByte & Map.LEFT) > 0;
+                    tile.down = (walkByte & Map.DOWN) > 0;
+
+                    tile.index = i;
                 }
             }
 
@@ -356,12 +366,110 @@ module tiledmap {
         }
 
         /**
+         * 根据指定的两个索引数，找出其间由索引组成的路径数组
+         * @param index0        起点索引
+         * @param index1        终点索引
+         */
+        public findPathWithIndexes(index0:number, index1:number):number[] {
+            var path:number[] = [];
+
+            // TODO: 需要一个真正的 A* 级别算法
+            var tileData:Tile[] = this.tileData;
+            //var walkingData:number[] = this.walkingData;
+            var hTileCount:number = this.width;
+
+            var open:Tile[] = [];
+            var close:Tile[] = [];
+
+            var tile:Tile = tileData[index0];
+            var nextTile:Tile, nearestInOpen:number;
+            var target:Tile = tileData[index1];
+
+            tile.G = 0;
+            tile.guessDistance(target);
+            tile.parentIndex = 0;
+
+            open.push(tile);
+
+            var i:number, m:number, f:number;
+
+            for (;tile.H !== 0;) {
+
+                // 如果某方向可走，则它对应该方向上下一格一定是索引存在的，不需要额外的检查
+                if (tile.right) {
+                    nextTile = tileData[tile.index + 1];
+                    // TODO: 待续
+                    if (close.indexOf(nextTile) === -1) {
+                        if (open.indexOf(nextTile) === -1) {
+                            nextTile.setParent(tile);
+                            nextTile.guessDistance(target);
+
+                            open.push(nextTile);
+                        }
+                    }
+                }
+                if (tile.up) {
+                    nextTile = tileData[tile.index - hTileCount];
+                    if (open.indexOf(nextTile) === -1) {
+                        nextTile.setParent(tile);
+                        nextTile.guessDistance(target);
+
+                        open.push(nextTile);
+                    }
+                }
+                if (tile.left) {
+                    nextTile = tileData[tile.index - 1];
+                    if (open.indexOf(nextTile) === -1) {
+                        nextTile.setParent(tile);
+                        nextTile.guessDistance(target);
+
+                        open.push(nextTile);
+                    }
+                }
+                if (tile.down) {
+                    nextTile = tileData[tile.index + hTileCount];
+                    if (open.indexOf(nextTile) === -1) {
+                        nextTile.setParent(tile);
+                        nextTile.guessDistance(target);
+
+                        open.push(nextTile);
+                    }
+                }
+
+                open.splice(open.indexOf(tile), 1);
+                close.push(tile);
+
+                // 找出 open 列表内现存 F 值最小的砖块，作为下一循环使用
+                nearestInOpen = 0;
+                f = 4096;       // 先设置 f 参数为路径不可能达到的最大值
+                for (i=0, m=open.length; i<m; i++) {
+                    tile = open[i];
+                    if (tile.F < f) {
+                        f = tile.F;
+                        nearestInOpen = i;
+                    }
+                }
+
+                tile = open[nearestInOpen];
+            }
+
+            // 将 close 列表按顺序变成 path 格式
+            for (i=0, m=close.length; i<m; i++) {
+                tile = close[i];
+                path.push(tile.index);
+            }
+
+            path.push(index1);
+            return path;
+        }
+
+        /**
          * 根据指定的砖块横纵值，返回它在一维数组内的索引位置
          * @param x
          * @param y
          * @returns {number}
          */
-        private getIndexOfPosXY(x:number, y:number):number {
+        public getIndexOfPosXY(x:number, y:number):number {
             return y * this.width + x;
         }
     }

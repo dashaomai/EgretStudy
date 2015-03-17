@@ -14,12 +14,20 @@ module tiledmap {
         private team:vo.Team;
         private teamAvatar:egret.Bitmap;
 
+        private path:number[];
+        private passedTime:number;
+
         public constructor(map:Map) {
             super();
 
             this.map = map;
 
             this.drawMap();
+
+            this.touchEnabled = true;
+            this.touchChildren = false;
+
+            this.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTapHandler, this);
         }
 
         /**
@@ -190,6 +198,51 @@ module tiledmap {
 
             this.addChild(wall);
 
+        }
+
+        private onTapHandler(e:egret.TouchEvent):void {
+            var posX:number, posY:number;
+
+            posX = Math.floor(e.localX / this.map.tileWidth);
+            posY = Math.floor(e.localY / this.map.tileHeight);
+
+            //egret.Logger.info('捕获到点击：x = ' + e.localX + ', y = ' + e.localY + ';\t 砖块位置为：x = ' + posX + ', y = ' + posY);
+
+            var index0:number, index1:number;
+
+            index1 = this.map.getIndexOfPosXY(posX, posY);
+
+            // 不走去无效的格子
+            if (this.map.walkingData[index1] === 0)
+                return;
+
+            posX = Math.floor(this.teamAvatar.x / this.map.tileWidth);
+            posY = Math.floor(this.teamAvatar.y / this.map.tileHeight);
+
+            index0 = this.map.getIndexOfPosXY(posX, posY);
+
+            this.path = this.map.findPathWithIndexes(index0, index1);
+
+            // 为按路径行走动画做准备
+            this.passedTime = 0;
+            egret.Ticker.getInstance().register(this.advancedTime, this);
+        }
+
+        private advancedTime(time:number):void {
+            this.passedTime += time;
+
+            if (this.passedTime > 300) {
+                var index:number = this.path.shift();
+
+                if (!index) {
+                    egret.Ticker.getInstance().unregister(this.advancedTime, this);
+                    return;
+                }
+
+                this.moveTeamToIndex(index);
+
+                this.passedTime -= 300;
+            }
         }
 
         public addTeam(team:vo.Team):void {
