@@ -391,6 +391,7 @@ module tiledmap {
 
             open.push(tile);
 
+            var pid:number;
             var i:number, m:number, f:number;
 
             for (;tile.H !== 0;) {
@@ -410,41 +411,49 @@ module tiledmap {
                 }
                 if (tile.up) {
                     nextTile = tileData[tile.index - hTileCount];
-                    if (open.indexOf(nextTile) === -1) {
-                        nextTile.setParent(tile);
-                        nextTile.guessDistance(target);
+                    if (close.indexOf(nextTile) === -1) {
+                        if (open.indexOf(nextTile) === -1) {
+                            nextTile.setParent(tile);
+                            nextTile.guessDistance(target);
 
-                        open.push(nextTile);
+                            open.push(nextTile);
+                        }
                     }
                 }
                 if (tile.left) {
                     nextTile = tileData[tile.index - 1];
-                    if (open.indexOf(nextTile) === -1) {
-                        nextTile.setParent(tile);
-                        nextTile.guessDistance(target);
+                    if (close.indexOf(nextTile) === -1) {
+                        if (open.indexOf(nextTile) === -1) {
+                            nextTile.setParent(tile);
+                            nextTile.guessDistance(target);
 
-                        open.push(nextTile);
+                            open.push(nextTile);
+                        }
                     }
                 }
                 if (tile.down) {
                     nextTile = tileData[tile.index + hTileCount];
-                    if (open.indexOf(nextTile) === -1) {
-                        nextTile.setParent(tile);
-                        nextTile.guessDistance(target);
+                    if (close.indexOf(nextTile) === -1) {
+                        if (open.indexOf(nextTile) === -1) {
+                            nextTile.setParent(tile);
+                            nextTile.guessDistance(target);
 
-                        open.push(nextTile);
+                            open.push(nextTile);
+                        }
                     }
                 }
 
                 open.splice(open.indexOf(tile), 1);
                 close.push(tile);
 
+                pid = tile.index;
+
                 // 找出 open 列表内现存 F 值最小的砖块，作为下一循环使用
                 nearestInOpen = 0;
                 f = 4096;       // 先设置 f 参数为路径不可能达到的最大值
                 for (i=0, m=open.length; i<m; i++) {
                     tile = open[i];
-                    if (tile.F < f) {
+                    if (tile.parentIndex === pid && tile.F < f) {
                         f = tile.F;
                         nearestInOpen = i;
                     }
