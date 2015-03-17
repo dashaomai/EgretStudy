@@ -5,151 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1eded808-670c-4399-a4ca-c7217c39548d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/extension/resource/analyzer/AnalyzerBase.js" afterPath="$PROJECT_DIR$/libs/core/extension/resource/analyzer/AnalyzerBase.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/extension/resource/analyzer/BinAnalyzer.js" afterPath="$PROJECT_DIR$/libs/core/extension/resource/analyzer/BinAnalyzer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/display/Bitmap.js" afterPath="$PROJECT_DIR$/libs/core/egret/display/Bitmap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/display/BitmapFillMode.js" afterPath="$PROJECT_DIR$/libs/core/egret/display/BitmapFillMode.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/text/BitmapFont.js" afterPath="$PROJECT_DIR$/libs/core/egret/text/BitmapFont.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/text/BitmapText.js" afterPath="$PROJECT_DIR$/libs/core/egret/text/BitmapText.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/display/BlendMode.js" afterPath="$PROJECT_DIR$/libs/core/egret/display/BlendMode.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/filters/BlurFilter.js" afterPath="$PROJECT_DIR$/libs/core/egret/filters/BlurFilter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/context/renderer/webgl/shaders/BlurShader.js" afterPath="$PROJECT_DIR$/libs/core/egret/context/renderer/webgl/shaders/BlurShader.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/context/Browser.js" afterPath="$PROJECT_DIR$/libs/core/egret/context/Browser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/utils/ByteArray.js" afterPath="$PROJECT_DIR$/libs/core/egret/utils/ByteArray.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/context/renderer/webgl/shaders/ColorTransformShader.js" afterPath="$PROJECT_DIR$/libs/core/egret/context/renderer/webgl/shaders/ColorTransformShader.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/context/devices/DeviceContext.js" afterPath="$PROJECT_DIR$/libs/core/egret/context/devices/DeviceContext.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/display/DisplayObject.js" afterPath="$PROJECT_DIR$/libs/core/egret/display/DisplayObject.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/display/DisplayObjectContainer.js" afterPath="$PROJECT_DIR$/libs/core/egret/display/DisplayObjectContainer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/tween/Ease.js" afterPath="$PROJECT_DIR$/libs/core/egret/tween/Ease.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/context/renderer/webgl/shaders/EgretShader.js" afterPath="$PROJECT_DIR$/libs/core/egret/context/renderer/webgl/shaders/EgretShader.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/events/Event.js" afterPath="$PROJECT_DIR$/libs/core/egret/events/Event.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/events/EventDispatcher.js" afterPath="$PROJECT_DIR$/libs/core/egret/events/EventDispatcher.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/events/EventPhase.js" afterPath="$PROJECT_DIR$/libs/core/egret/events/EventPhase.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/context/external/ExternalInterface.js" afterPath="$PROJECT_DIR$/libs/core/egret/context/external/ExternalInterface.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/filters/Filter.js" afterPath="$PROJECT_DIR$/libs/core/egret/filters/Filter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/extension/resource/analyzer/FontAnalyzer.js" afterPath="$PROJECT_DIR$/libs/core/extension/resource/analyzer/FontAnalyzer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/display/FrameLabel.js" afterPath="$PROJECT_DIR$/libs/core/egret/display/FrameLabel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/display/Graphics.js" afterPath="$PROJECT_DIR$/libs/core/egret/display/Graphics.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/context/renderer/HTML5CanvasRenderer.js" afterPath="$PROJECT_DIR$/libs/core/egret/context/renderer/HTML5CanvasRenderer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/context/devices/HTML5DeviceContext.js" afterPath="$PROJECT_DIR$/libs/core/egret/context/devices/HTML5DeviceContext.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/context/net/HTML5NetContext.js" afterPath="$PROJECT_DIR$/libs/core/egret/context/net/HTML5NetContext.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/context/display/HTML5StageText.js" afterPath="$PROJECT_DIR$/libs/core/egret/context/display/HTML5StageText.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/context/interactive/HTML5TouchContext.js" afterPath="$PROJECT_DIR$/libs/core/egret/context/interactive/HTML5TouchContext.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/events/HTTPStatusEvent.js" afterPath="$PROJECT_DIR$/libs/core/egret/events/HTTPStatusEvent.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/utils/HashObject.js" afterPath="$PROJECT_DIR$/libs/core/egret/utils/HashObject.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/layout/HorizontalAlign.js" afterPath="$PROJECT_DIR$/libs/core/egret/layout/HorizontalAlign.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/text/HtmlTextParser.js" afterPath="$PROJECT_DIR$/libs/core/egret/text/HtmlTextParser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/events/IEventDispatcher.js" afterPath="$PROJECT_DIR$/libs/core/egret/events/IEventDispatcher.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/utils/IHashObject.js" afterPath="$PROJECT_DIR$/libs/core/egret/utils/IHashObject.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/events/IOErrorEvent.js" afterPath="$PROJECT_DIR$/libs/core/egret/events/IOErrorEvent.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/extension/resource/analyzer/ImageAnalyzer.js" afterPath="$PROJECT_DIR$/libs/core/extension/resource/analyzer/ImageAnalyzer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/utils/Injector.js" afterPath="$PROJECT_DIR$/libs/core/egret/utils/Injector.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/text/InputController.js" afterPath="$PROJECT_DIR$/libs/core/egret/text/InputController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/context/interactive/InteractionMode.js" afterPath="$PROJECT_DIR$/libs/core/egret/context/interactive/InteractionMode.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/extension/resource/analyzer/JsonAnalyzer.js" afterPath="$PROJECT_DIR$/libs/core/extension/resource/analyzer/JsonAnalyzer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/clevercells/venture/vo/Team.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/clevercells/venture/vo/Venturer.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/src/com/clevercells/venture/tiledmap/Layer.js" afterPath="$PROJECT_DIR$/bin-debug/src/com/clevercells/venture/tiledmap/Layer.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/src/LoadingUI.js" afterPath="$PROJECT_DIR$/bin-debug/src/LoadingUI.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/utils/Logger.js" afterPath="$PROJECT_DIR$/libs/core/egret/utils/Logger.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/src/Main.js" afterPath="$PROJECT_DIR$/bin-debug/src/Main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/context/MainContext.js" afterPath="$PROJECT_DIR$/libs/core/egret/context/MainContext.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.ts" afterPath="$PROJECT_DIR$/src/Main.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/src/com/clevercells/venture/tiledmap/Map.js" afterPath="$PROJECT_DIR$/bin-debug/src/com/clevercells/venture/tiledmap/Map.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/clevercells/venture/tiledmap/Map.ts" afterPath="$PROJECT_DIR$/src/com/clevercells/venture/tiledmap/Map.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/src/com/clevercells/venture/tiledmap/MapView.js" afterPath="$PROJECT_DIR$/bin-debug/src/com/clevercells/venture/tiledmap/MapView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/geom/Matrix.js" afterPath="$PROJECT_DIR$/libs/core/egret/geom/Matrix.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/display/MovieClip.js" afterPath="$PROJECT_DIR$/libs/core/egret/display/MovieClip.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/display/MovieClipData.js" afterPath="$PROJECT_DIR$/libs/core/egret/display/MovieClipData.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/display/MovieClipDataFactory.js" afterPath="$PROJECT_DIR$/libs/core/egret/display/MovieClipDataFactory.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/context/devices/NativeDeviceContext.js" afterPath="$PROJECT_DIR$/libs/core/egret/context/devices/NativeDeviceContext.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/context/net/NativeNetContext.js" afterPath="$PROJECT_DIR$/libs/core/egret/context/net/NativeNetContext.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/context/renderer/NativeRendererContext.js" afterPath="$PROJECT_DIR$/libs/core/egret/context/renderer/NativeRendererContext.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/context/net/NativeResourceLoader.js" afterPath="$PROJECT_DIR$/libs/core/egret/context/net/NativeResourceLoader.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/context/display/NativeStageText.js" afterPath="$PROJECT_DIR$/libs/core/egret/context/display/NativeStageText.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/context/interactive/NativeTouchContext.js" afterPath="$PROJECT_DIR$/libs/core/egret/context/interactive/NativeTouchContext.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/context/net/NetContext.js" afterPath="$PROJECT_DIR$/libs/core/egret/context/net/NetContext.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/jslib/NumberUtils.js" afterPath="$PROJECT_DIR$/libs/core/jslib/NumberUtils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/clevercells/venture/tiledmap/MapView.ts" afterPath="$PROJECT_DIR$/src/com/clevercells/venture/tiledmap/MapView.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/src/com/clevercells/venture/tiledmap/Object.js" afterPath="$PROJECT_DIR$/bin-debug/src/com/clevercells/venture/tiledmap/Object.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/src/com/clevercells/venture/tiledmap/ObjectGroup.js" afterPath="$PROJECT_DIR$/bin-debug/src/com/clevercells/venture/tiledmap/ObjectGroup.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/geom/Point.js" afterPath="$PROJECT_DIR$/libs/core/egret/geom/Point.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/context/renderer/webgl/shaders/PrimitiveShader.js" afterPath="$PROJECT_DIR$/libs/core/egret/context/renderer/webgl/shaders/PrimitiveShader.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/utils/Profiler.js" afterPath="$PROJECT_DIR$/libs/core/egret/utils/Profiler.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/events/ProgressEvent.js" afterPath="$PROJECT_DIR$/libs/core/egret/events/ProgressEvent.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/context/PromiseObject.js" afterPath="$PROJECT_DIR$/libs/core/egret/context/PromiseObject.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/geom/Rectangle.js" afterPath="$PROJECT_DIR$/libs/core/egret/geom/Rectangle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/utils/Recycler.js" afterPath="$PROJECT_DIR$/libs/core/egret/utils/Recycler.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/utils/RenderCommand.js" afterPath="$PROJECT_DIR$/libs/core/egret/utils/RenderCommand.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/context/renderer/RenderFilter.js" afterPath="$PROJECT_DIR$/libs/core/egret/context/renderer/RenderFilter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/display/RenderTexture.js" afterPath="$PROJECT_DIR$/libs/core/egret/display/RenderTexture.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/context/renderer/RendererContext.js" afterPath="$PROJECT_DIR$/libs/core/egret/context/renderer/RendererContext.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/extension/resource/Resource.js" afterPath="$PROJECT_DIR$/libs/core/extension/resource/Resource.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/extension/resource/core/ResourceConfig.js" afterPath="$PROJECT_DIR$/libs/core/extension/resource/core/ResourceConfig.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/extension/resource/events/ResourceEvent.js" afterPath="$PROJECT_DIR$/libs/core/extension/resource/events/ResourceEvent.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/extension/resource/core/ResourceItem.js" afterPath="$PROJECT_DIR$/libs/core/extension/resource/core/ResourceItem.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/extension/resource/core/ResourceLoader.js" afterPath="$PROJECT_DIR$/libs/core/extension/resource/core/ResourceLoader.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/utils/SAXParser.js" afterPath="$PROJECT_DIR$/libs/core/egret/utils/SAXParser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/display/ScrollView.js" afterPath="$PROJECT_DIR$/libs/core/egret/display/ScrollView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/display/Shape.js" afterPath="$PROJECT_DIR$/libs/core/egret/display/Shape.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/extension/resource/analyzer/SheetAnalyzer.js" afterPath="$PROJECT_DIR$/libs/core/extension/resource/analyzer/SheetAnalyzer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/media/Sound.js" afterPath="$PROJECT_DIR$/libs/core/egret/media/Sound.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/extension/resource/analyzer/SoundAnalyzer.js" afterPath="$PROJECT_DIR$/libs/core/extension/resource/analyzer/SoundAnalyzer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/display/Sprite.js" afterPath="$PROJECT_DIR$/libs/core/egret/display/Sprite.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/display/SpriteSheet.js" afterPath="$PROJECT_DIR$/libs/core/egret/display/SpriteSheet.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/display/Stage.js" afterPath="$PROJECT_DIR$/libs/core/egret/display/Stage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/context/StageDelegate.js" afterPath="$PROJECT_DIR$/libs/core/egret/context/StageDelegate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/display/StageScaleMode.js" afterPath="$PROJECT_DIR$/libs/core/egret/display/StageScaleMode.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/context/display/StageText.js" afterPath="$PROJECT_DIR$/libs/core/egret/context/display/StageText.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/extension/resource/analyzer/TextAnalyzer.js" afterPath="$PROJECT_DIR$/libs/core/extension/resource/analyzer/TextAnalyzer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/events/TextEvent.js" afterPath="$PROJECT_DIR$/libs/core/egret/events/TextEvent.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/text/TextField.js" afterPath="$PROJECT_DIR$/libs/core/egret/text/TextField.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/text/TextFieldType.js" afterPath="$PROJECT_DIR$/libs/core/egret/text/TextFieldType.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/display/Texture.js" afterPath="$PROJECT_DIR$/libs/core/egret/display/Texture.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/context/Ticker.js" afterPath="$PROJECT_DIR$/libs/core/egret/context/Ticker.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/src/com/clevercells/venture/tiledmap/Tile.js" afterPath="$PROJECT_DIR$/bin-debug/src/com/clevercells/venture/tiledmap/Tile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/clevercells/venture/tiledmap/Tile.ts" afterPath="$PROJECT_DIR$/src/com/clevercells/venture/tiledmap/Tile.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/src/com/clevercells/venture/tiledmap/TileSet.js" afterPath="$PROJECT_DIR$/bin-debug/src/com/clevercells/venture/tiledmap/TileSet.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/src/com/clevercells/venture/tiledmap/TiledMapParser.js" afterPath="$PROJECT_DIR$/bin-debug/src/com/clevercells/venture/tiledmap/TiledMapParser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/utils/Timer.js" afterPath="$PROJECT_DIR$/libs/core/egret/utils/Timer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/events/TimerEvent.js" afterPath="$PROJECT_DIR$/libs/core/egret/events/TimerEvent.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/context/interactive/TouchContext.js" afterPath="$PROJECT_DIR$/libs/core/egret/context/interactive/TouchContext.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/events/TouchEvent.js" afterPath="$PROJECT_DIR$/libs/core/egret/events/TouchEvent.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/tween/Tween.js" afterPath="$PROJECT_DIR$/libs/core/egret/tween/Tween.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/net/URLLoader.js" afterPath="$PROJECT_DIR$/libs/core/egret/net/URLLoader.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/net/URLLoaderDataFormat.js" afterPath="$PROJECT_DIR$/libs/core/egret/net/URLLoaderDataFormat.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/net/URLRequest.js" afterPath="$PROJECT_DIR$/libs/core/egret/net/URLRequest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/net/URLRequestHeader.js" afterPath="$PROJECT_DIR$/libs/core/egret/net/URLRequestHeader.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/net/URLRequestMethod.js" afterPath="$PROJECT_DIR$/libs/core/egret/net/URLRequestMethod.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/net/URLVariables.js" afterPath="$PROJECT_DIR$/libs/core/egret/net/URLVariables.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/src/com/clevercells/venture/tiledmap/Utils.js" afterPath="$PROJECT_DIR$/bin-debug/src/com/clevercells/venture/tiledmap/Utils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/context/net/VersionController.js" afterPath="$PROJECT_DIR$/libs/core/egret/context/net/VersionController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/layout/VerticalAlign.js" afterPath="$PROJECT_DIR$/libs/core/egret/layout/VerticalAlign.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/context/renderer/WebGLRenderer.js" afterPath="$PROJECT_DIR$/libs/core/egret/context/renderer/WebGLRenderer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/context/renderer/webgl/WebGLShaderManager.js" afterPath="$PROJECT_DIR$/libs/core/egret/context/renderer/webgl/WebGLShaderManager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/context/renderer/webgl/WebGLUtils.js" afterPath="$PROJECT_DIR$/libs/core/egret/context/renderer/webgl/WebGLUtils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/utils/XML.js" afterPath="$PROJECT_DIR$/libs/core/egret/utils/XML.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/extension/resource/analyzer/XMLAnalyzer.js" afterPath="$PROJECT_DIR$/libs/core/extension/resource/analyzer/XMLAnalyzer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/utils/callLater.js" afterPath="$PROJECT_DIR$/libs/core/egret/utils/callLater.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/i18n/cn.js" afterPath="$PROJECT_DIR$/libs/core/egret/i18n/cn.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/core.d.json" afterPath="$PROJECT_DIR$/libs/core/core.d.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/core.d.ts" afterPath="$PROJECT_DIR$/libs/core/core.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/lib/egret_file_list.js" afterPath="$PROJECT_DIR$/bin-debug/lib/egret_file_list.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/lib/egret_file_list_native.js" afterPath="$PROJECT_DIR$/bin-debug/lib/egret_file_list_native.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/src/game_file_list.js" afterPath="$PROJECT_DIR$/bin-debug/src/game_file_list.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/utils/getDefinitionByName.js" afterPath="$PROJECT_DIR$/libs/core/egret/utils/getDefinitionByName.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/utils/getQualifiedClassName.js" afterPath="$PROJECT_DIR$/libs/core/egret/utils/getQualifiedClassName.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/utils/getTimer.js" afterPath="$PROJECT_DIR$/libs/core/egret/utils/getTimer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/utils/hasDefinition.js" afterPath="$PROJECT_DIR$/libs/core/egret/utils/hasDefinition.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/context/html5.d.json" afterPath="$PROJECT_DIR$/libs/core/egret/context/html5.d.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/context/html5.d.ts" afterPath="$PROJECT_DIR$/libs/core/egret/context/html5.d.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/launcher/index.html" afterPath="$PROJECT_DIR$/launcher/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/context/localStorage/localStorage.js" afterPath="$PROJECT_DIR$/libs/core/egret/context/localStorage/localStorage.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/src/manifest.json" afterPath="$PROJECT_DIR$/bin-debug/src/manifest.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/context/native.d.json" afterPath="$PROJECT_DIR$/libs/core/egret/context/native.d.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/context/native.d.ts" afterPath="$PROJECT_DIR$/libs/core/egret/context/native.d.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/launcher/native_require.js" afterPath="$PROJECT_DIR$/launcher/native_require.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/launcher/release.html" afterPath="$PROJECT_DIR$/launcher/release.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/extension/resource/res.d.json" afterPath="$PROJECT_DIR$/libs/core/extension/resource/res.d.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/extension/resource/res.d.ts" afterPath="$PROJECT_DIR$/libs/core/extension/resource/res.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/resource.json" afterPath="$PROJECT_DIR$/resource/resource.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/utils/setTimeout.js" afterPath="$PROJECT_DIR$/libs/core/egret/utils/setTimeout.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libs/core/egret/utils/toColorString.js" afterPath="$PROJECT_DIR$/libs/core/egret/utils/toColorString.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TiledMap.iws" />
@@ -179,9 +56,45 @@
           <file leaf-file-name="Main.ts" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Main.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="1590" max-vertical-offset="1755">
-                  <caret line="106" column="31" selection-start-line="106" selection-start-column="31" selection-end-line="106" selection-end-column="31" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="1539" max-vertical-offset="2159">
+                  <caret line="116" column="30" selection-start-line="116" selection-start-column="30" selection-end-line="116" selection-end-column="30" />
                   <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Venturer.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/clevercells/venture/vo/Venturer.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+                  <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
+                  <folding>
+                    <element signature="n#!!doc;n#vo#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Team.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/clevercells/venture/vo/Team.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+                  <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+                  <folding>
+                    <element signature="n#!!doc;n#vo#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Object.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/clevercells/venture/tiledmap/Object.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="859" max-vertical-offset="1547">
+                  <caret line="33" column="15" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
+                  <folding>
+                    <element signature="n#!!doc;n#tiledmap#0" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -189,10 +102,12 @@
           <file leaf-file-name="MapView.ts" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/clevercells/venture/tiledmap/MapView.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.18814433" vertical-offset="1909" max-vertical-offset="2685">
-                  <caret line="139" column="49" selection-start-line="139" selection-start-column="49" selection-end-line="139" selection-end-column="49" />
+                <state vertical-scroll-proportion="0.8259386" vertical-offset="349" max-vertical-offset="986">
+                  <caret line="222" column="60" selection-start-line="222" selection-start-column="60" selection-end-line="222" selection-end-column="60" />
                   <folding>
                     <element signature="n#!!doc;n#tiledmap#0" expanded="false" />
+                    <element signature="n#!!block;n#constructor#0;n#MapView#0;n#tiledmap#0" expanded="false" />
+                    <element signature="n#!!block;n#drawMap#0;n#MapView#0;n#tiledmap#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -201,21 +116,22 @@
           <file leaf-file-name="Map.ts" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/clevercells/venture/tiledmap/Map.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="3780" max-vertical-offset="4920">
-                  <caret line="252" column="69" selection-start-line="252" selection-start-column="69" selection-end-line="252" selection-end-column="69" />
-                  <folding />
+                <state vertical-scroll-proportion="0.0" vertical-offset="3528" max-vertical-offset="4352">
+                  <caret line="321" column="47" selection-start-line="321" selection-start-column="47" selection-end-line="321" selection-end-column="47" />
+                  <folding>
+                    <element signature="n#!!block;n#constructor#0;n#Map#0;n#tiledmap#0" expanded="false" />
+                    <element signature="e#4361#6602#0" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Object.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/clevercells/venture/tiledmap/Object.ts">
+          <file leaf-file-name="Tile.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/clevercells/venture/tiledmap/Tile.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="1365">
-                  <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
-                  <folding>
-                    <element signature="n#!!doc;n#tiledmap#0" expanded="false" />
-                  </folding>
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+                  <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -223,7 +139,7 @@
           <file leaf-file-name="Layer.ts" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/clevercells/venture/tiledmap/Layer.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="765">
+                <state vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="867">
                   <caret line="44" column="41" selection-start-line="44" selection-start-column="41" selection-end-line="44" selection-end-column="41" />
                   <folding>
                     <element signature="n#!!doc;n#tiledmap#0" expanded="false" />
@@ -239,8 +155,8 @@
           <file leaf-file-name="map01.json" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/resource/map/map01.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.86037236" vertical-offset="3673" max-vertical-offset="4425">
-                  <caret line="288" column="11" selection-start-line="288" selection-start-column="9" selection-end-line="288" selection-end-column="11" />
+                <state vertical-scroll-proportion="0.825" vertical-offset="4332" max-vertical-offset="5015">
+                  <caret line="282" column="25" selection-start-line="282" selection-start-column="25" selection-end-line="282" selection-end-column="25" />
                   <folding />
                 </state>
               </provider>
@@ -262,12 +178,14 @@
         <option value="$PROJECT_DIR$/src/com/clevercells/venture/tiledmap/Layer.ts" />
         <option value="$PROJECT_DIR$/src/com/clevercells/venture/tiledmap/TileSet.ts" />
         <option value="$PROJECT_DIR$/src/com/clevercells/venture/tiledmap/ObjectGroup.ts" />
-        <option value="$PROJECT_DIR$/src/com/clevercells/venture/tiledmap/Tile.ts" />
         <option value="$PROJECT_DIR$/src/com/clevercells/venture/tiledmap/Utils.ts" />
-        <option value="$PROJECT_DIR$/resource/map/map01.json" />
-        <option value="$PROJECT_DIR$/src/Main.ts" />
         <option value="$PROJECT_DIR$/src/com/clevercells/venture/tiledmap/Object.ts" />
+        <option value="$PROJECT_DIR$/resource/map/map01.json" />
+        <option value="$PROJECT_DIR$/src/com/clevercells/venture/vo/Venturer.ts" />
+        <option value="$PROJECT_DIR$/src/com/clevercells/venture/vo/Team.ts" />
+        <option value="$PROJECT_DIR$/src/com/clevercells/venture/tiledmap/Tile.ts" />
         <option value="$PROJECT_DIR$/src/com/clevercells/venture/tiledmap/Map.ts" />
+        <option value="$PROJECT_DIR$/src/Main.ts" />
         <option value="$PROJECT_DIR$/src/com/clevercells/venture/tiledmap/MapView.ts" />
       </list>
     </option>
@@ -276,9 +194,10 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="873" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1456" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -303,6 +222,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -361,13 +281,42 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="vo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TiledMap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TiledMap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clevercells" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="venture" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="tiledmap" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -450,6 +399,10 @@
       <option name="name" value="" />
       <method />
     </configuration>
+    <configuration default="true" type="NodeWebKit" factoryName="Node-webkit">
+      <option name="name" value="" />
+      <method />
+    </configuration>
     <configuration default="true" type="PhoneGap" factoryName="PhoneGap/Cordova">
       <option name="myExecutable" />
       <option name="myWorkDir" />
@@ -458,10 +411,6 @@
       <option name="myExtraArgs" />
       <option name="hasTarget" value="false" />
       <option name="target" />
-      <method />
-    </configuration>
-    <configuration default="true" type="NodeWebKit" factoryName="Node-webkit">
-      <option name="name" value="" />
       <method />
     </configuration>
     <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
@@ -501,15 +450,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="873" extended-state="6" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16465864" sideWeight="0.49964765" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16421896" sideWeight="0.49964765" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19661734" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19661734" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32931727" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16465864" sideWeight="0.5003524" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -517,11 +468,9 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32987013" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32931727" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -545,32 +494,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resource/map/map01.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4425">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/clevercells/venture/tiledmap/Utils.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="697" max-vertical-offset="1122">
-          <caret line="43" column="75" selection-start-line="43" selection-start-column="75" selection-end-line="43" selection-end-column="75" />
-          <folding>
-            <element signature="n#!!doc;n#tiledmap#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/clevercells/venture/tiledmap/Map.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1553" max-vertical-offset="2210">
-          <caret line="121" column="38" selection-start-line="121" selection-start-column="38" selection-end-line="121" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/clevercells/venture/tiledmap/Tile.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="255">
@@ -638,6 +561,8 @@
           <caret line="97" column="43" selection-start-line="97" selection-start-column="43" selection-end-line="97" selection-end-column="43" />
           <folding>
             <element signature="n#!!doc;n#tiledmap#0" expanded="false" />
+            <element signature="n#!!block;n#constructor#0;n#MapView#0;n#tiledmap#0" expanded="false" />
+            <element signature="n#!!block;n#drawMap#0;n#MapView#0;n#tiledmap#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -656,7 +581,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1666">
           <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-          <folding />
+          <folding>
+            <element signature="n#!!block;n#constructor#0;n#Map#0;n#tiledmap#0" expanded="false" />
+            <element signature="e#4361#6602#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -742,7 +670,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1470">
           <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-          <folding />
+          <folding>
+            <element signature="n#!!block;n#constructor#0;n#Map#0;n#tiledmap#0" expanded="false" />
+            <element signature="e#4361#6602#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -818,7 +749,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="390">
           <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
-          <folding />
+          <folding>
+            <element signature="n#!!block;n#constructor#0;n#Map#0;n#tiledmap#0" expanded="false" />
+            <element signature="e#4361#6602#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -903,13 +837,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/clevercells/venture/tiledmap/Tile.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48920864" vertical-offset="0" max-vertical-offset="695">
-          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/clevercells/venture/tiledmap/ObjectGroup.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16834532" vertical-offset="189" max-vertical-offset="884">
@@ -930,34 +857,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resource/map/map01.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.86037236" vertical-offset="3673" max-vertical-offset="4425">
-          <caret line="288" column="11" selection-start-line="288" selection-start-column="9" selection-end-line="288" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1282" max-vertical-offset="1989">
-          <caret line="106" column="31" selection-start-line="106" selection-start-column="31" selection-end-line="106" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/clevercells/venture/tiledmap/Object.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1547">
-          <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
-          <folding>
-            <element signature="n#!!doc;n#tiledmap#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/clevercells/venture/tiledmap/Map.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3845" max-vertical-offset="5576">
-          <caret line="252" column="69" selection-start-line="252" selection-start-column="69" selection-end-line="252" selection-end-column="69" />
+        <state vertical-scroll-proportion="0.825" vertical-offset="4332" max-vertical-offset="5015">
+          <caret line="282" column="25" selection-start-line="282" selection-start-column="25" selection-end-line="282" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -972,12 +873,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/clevercells/venture/tiledmap/MapView.ts">
+    <entry file="file://$PROJECT_DIR$/src/com/clevercells/venture/vo/Venturer.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18814433" vertical-offset="1909" max-vertical-offset="2685">
-          <caret line="139" column="49" selection-start-line="139" selection-start-column="49" selection-end-line="139" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+          <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
+          <folding>
+            <element signature="n#!!doc;n#vo#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/clevercells/venture/vo/Team.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+          <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+          <folding>
+            <element signature="n#!!doc;n#vo#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/core/extension/resource/res.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="14731" max-vertical-offset="15640">
+          <caret line="878" column="13" selection-start-line="878" selection-start-column="13" selection-end-line="878" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/clevercells/venture/tiledmap/Tile.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/clevercells/venture/tiledmap/Object.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="859" max-vertical-offset="1547">
+          <caret line="33" column="15" selection-start-line="33" selection-start-column="15" selection-end-line="33" selection-end-column="15" />
           <folding>
             <element signature="n#!!doc;n#tiledmap#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/clevercells/venture/tiledmap/Map.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3528" max-vertical-offset="4352">
+          <caret line="321" column="47" selection-start-line="321" selection-start-column="47" selection-end-line="321" selection-end-column="47" />
+          <folding>
+            <element signature="n#!!block;n#constructor#0;n#Map#0;n#tiledmap#0" expanded="false" />
+            <element signature="e#4361#6602#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1539" max-vertical-offset="2159">
+          <caret line="116" column="30" selection-start-line="116" selection-start-column="30" selection-end-line="116" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/clevercells/venture/tiledmap/MapView.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8259386" vertical-offset="349" max-vertical-offset="986">
+          <caret line="222" column="60" selection-start-line="222" selection-start-column="60" selection-end-line="222" selection-end-column="60" />
+          <folding>
+            <element signature="n#!!doc;n#tiledmap#0" expanded="false" />
+            <element signature="n#!!block;n#constructor#0;n#MapView#0;n#tiledmap#0" expanded="false" />
+            <element signature="n#!!block;n#drawMap#0;n#MapView#0;n#tiledmap#0" expanded="false" />
           </folding>
         </state>
       </provider>

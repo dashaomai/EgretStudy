@@ -105,6 +105,16 @@ class Main extends egret.DisplayObjectContainer {
 
         var mapView:tiledmap.MapView = new tiledmap.MapView(map);
         this.addChild(mapView);
+
+        var team:vo.Team = new vo.Team();
+
+        var venturer:vo.Venturer = new vo.Venturer();
+        venturer.name = '江波';
+        venturer.weight = 15;
+
+        team.venturers.push(venturer);
+
+        mapView.addTeam(team);
     }
 }
 

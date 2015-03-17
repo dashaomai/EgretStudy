@@ -99,6 +99,12 @@ var Main = (function (_super) {
         egret.Logger.info('The map is', map.version + ' ' + map.tileWidth + ' ' + map.layers[0].tileIds[0]);
         var mapView = new tiledmap.MapView(map);
         this.addChild(mapView);
+        var team = new vo.Team();
+        var venturer = new vo.Venturer();
+        venturer.name = '江波';
+        venturer.weight = 15;
+        team.venturers.push(venturer);
+        mapView.addTeam(team);
     };
     return Main;
 })(egret.DisplayObjectContainer);

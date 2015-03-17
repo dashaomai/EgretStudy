@@ -27,8 +27,11 @@ module tiledmap {
         public layers:Layer[];
         public objectGroups:ObjectGroup[];
 
-        // 可行走数据的数组，这是一维数组，存放所有的路径结点
+        // 地板图像砖块的信息，一维
         public tileData:Tile[];
+        // 地图事件对象的信息，短
+        public objectData:ObjectTile[];
+        // 可行走数据的数组，这是一维数组，存放所有的路径结点
         public walkingData:number[];
 
         // 当前地图渲染所需的 TileSet 纹理 id 记录。
@@ -106,6 +109,11 @@ module tiledmap {
                 this.tileData = [];
             else
                 this.tileData.length = 0;
+
+            if (!this.objectData)
+                this.objectData = [];
+            else
+                this.objectData.length = 0;
 
             if (!this.walkingData)
                 this.walkingData = [];
@@ -236,12 +244,13 @@ module tiledmap {
                         //objTile.tid = tileData[j] ? tileData[j].tid : tid++;
                         objTile.x = obj.x / tileWidth;
                         objTile.y = obj.y / tileHeight - 1;       // object 类型的 y 坐标是不对的，要上移一砖
-                        objTile.type = obj.type;
+
+                        objTile.type = getTypeByString(obj.type);
                         objTile.properties = obj.properties;
 
                         idx = this.getIndexOfPosXY(objTile.x, objTile.y);
 
-                        tileData[idx] = objTile;
+                        this.objectData.push(objTile);
 
                         // 对 walkingData 的砖块类型进行覆盖式更新
                         walkByte = walkingData[idx];
@@ -250,7 +259,7 @@ module tiledmap {
                             throw new Error('居然把对象放在无砖块的格子里了！');
 
                         // TODO: type 要改为从数值表读取
-                        walkByte |= (getTypeByString(obj.type) << 4);
+                        walkByte |= (objTile.type << 4);
 
                         walkingData[idx] = walkByte;
 
@@ -275,7 +284,6 @@ module tiledmap {
             // 借内墙数组对 walkingData 进行可行走方向的 patch
 
             var cross:number;       // 某内墙跨越了多少砖块
-
 
             for (i=0, m=innerWalls.length; i<m; i++) {
                 obj = innerWalls[i];
@@ -307,7 +315,44 @@ module tiledmap {
                 }
             }
 
-            egret.Logger.info('walkingData = ' + JSON.stringify(walkingData));
+            //egret.Logger.info('walkingData = ' + JSON.stringify(walkingData));
+        }
+
+        /**
+         * 指定对象砖块的类型（门、Boss 等），从当前地图找出它出现的第一个索引位置。
+         * @param type
+         * @returns {number}        该类型在地图上的第一个出现位置。如果为 -1，表示没找到
+         */
+        public getIndexOfType(type:number):number {
+            var ot:tiledmap.ObjectTile;
+
+            for (var i:number=0, m:number = this.objectData.length; i<m; i++) {
+                ot = this.objectData[i];
+
+                if (ot.type == type)
+                    return ot.x + ot.y * this.width;
+            }
+
+            return -1;
+        }
+
+        /**
+         * 指定对象砖块的类型（采集点，宝箱候选点等），从当前地图找出它出现的所有索引位置
+         * @param type
+         * @returns {number[]}
+         */
+        public getIndexesOfType(type:number):number[] {
+            var ot:tiledmap.ObjectTile;
+            var result:number[] = [];
+
+            for (var i:number=0, m:number = this.objectData.length; i<m; i++) {
+                ot = this.objectData[i];
+
+                if (ot.type == type)
+                    result.push(ot.x + ot.y * this.width);
+            }
+
+            return result;
         }
 
         /**

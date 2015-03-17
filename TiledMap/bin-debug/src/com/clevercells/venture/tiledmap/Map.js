@@ -40,6 +40,10 @@ var tiledmap;
                 this.tileData = [];
             else
                 this.tileData.length = 0;
+            if (!this.objectData)
+                this.objectData = [];
+            else
+                this.objectData.length = 0;
             if (!this.walkingData)
                 this.walkingData = [];
             else
@@ -136,16 +140,16 @@ var tiledmap;
                         //objTile.tid = tileData[j] ? tileData[j].tid : tid++;
                         objTile.x = obj.x / tileWidth;
                         objTile.y = obj.y / tileHeight - 1; // object 类型的 y 坐标是不对的，要上移一砖
-                        objTile.type = obj.type;
+                        objTile.type = tiledmap.getTypeByString(obj.type);
                         objTile.properties = obj.properties;
                         idx = this.getIndexOfPosXY(objTile.x, objTile.y);
-                        tileData[idx] = objTile;
+                        this.objectData.push(objTile);
                         // 对 walkingData 的砖块类型进行覆盖式更新
                         walkByte = walkingData[idx];
                         if (walkByte === 0)
                             throw new Error('居然把对象放在无砖块的格子里了！');
                         // TODO: type 要改为从数值表读取
-                        walkByte |= (tiledmap.getTypeByString(obj.type) << 4);
+                        walkByte |= (objTile.type << 4);
                         walkingData[idx] = walkByte;
                         this.usedTileSetIds[obj.globalId] = true;
                     }
@@ -192,7 +196,36 @@ var tiledmap;
                     }
                 }
             }
-            egret.Logger.info('walkingData = ' + JSON.stringify(walkingData));
+            //egret.Logger.info('walkingData = ' + JSON.stringify(walkingData));
+        };
+        /**
+         * 指定对象砖块的类型（门、Boss 等），从当前地图找出它出现的第一个索引位置。
+         * @param type
+         * @returns {number}        该类型在地图上的第一个出现位置。如果为 -1，表示没找到
+         */
+        Map.prototype.getIndexOfType = function (type) {
+            var ot;
+            for (var i = 0, m = this.objectData.length; i < m; i++) {
+                ot = this.objectData[i];
+                if (ot.type == type)
+                    return ot.x + ot.y * this.width;
+            }
+            return -1;
+        };
+        /**
+         * 指定对象砖块的类型（采集点，宝箱候选点等），从当前地图找出它出现的所有索引位置
+         * @param type
+         * @returns {number[]}
+         */
+        Map.prototype.getIndexesOfType = function (type) {
+            var ot;
+            var result = [];
+            for (var i = 0, m = this.objectData.length; i < m; i++) {
+                ot = this.objectData[i];
+                if (ot.type == type)
+                    result.push(ot.x + ot.y * this.width);
+            }
+            return result;
         };
         /**
          * 根据指定的砖块横纵值，返回它在一维数组内的索引位置

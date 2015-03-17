@@ -18,7 +18,7 @@ module tiledmap {
      * 放在 Object 层上的图形砖块，对应 MapObject 实例中 isTileObject 为 true 的对象图块
      */
     export class ObjectTile extends Tile {
-        public type:string;
+        public type:number;
 
         public properties:any;
     }
