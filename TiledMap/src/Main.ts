@@ -100,12 +100,15 @@ class Main extends egret.DisplayObjectContainer {
      * 创建游戏场景
      */
     private createGameScene(): void {
+        // 加载第一张测试用地图
         var map:tiledmap.Map = tiledmap.TiledMapParser.parse('map01_json');
         egret.Logger.info('The map is', map.version + ' ' + map.tileWidth + ' ' + map.layers[0].tileIds[0]);
 
+        // 根据地图创建相关的视图
         var mapView:tiledmap.MapView = new tiledmap.MapView(map);
         this.addChild(mapView);
 
+        // 往视图里添加一支冒险者团队
         var team:vo.Team = new vo.Team();
 
         var venturer:vo.Venturer = new vo.Venturer();

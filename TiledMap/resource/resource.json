@@ -5,7 +5,7 @@
 		"name":"preload"
 	},
 	{
-		"keys":"simples_pimples_png,map01_json,map02_json,hero_png",
+		"keys":"hero_png,12_json,001_png,11_json",
 		"name":"map"
 	}],
 	"resources":[
@@ -25,23 +25,23 @@
 		"url":"config/description.json"
 	},
 	{
-		"name":"simples_pimples_png",
-		"type":"image",
-		"url":"map/simples_pimples.png"
-	},
-	{
-		"name":"map01_json",
-		"type":"json",
-		"url":"map/map01.json"
-	},
-	{
-		"name":"map02_json",
-		"type":"json",
-		"url":"map/map02.json"
-	},
-	{
 		"name":"hero_png",
 		"type":"image",
 		"url":"map/hero.png"
+	},
+	{
+		"name":"12_json",
+		"type":"json",
+		"url":"E:/Works/Venture/Venture-Demo/resource/map/12.json"
+	},
+	{
+		"name":"001_png",
+		"type":"image",
+		"url":"E:/Works/Venture/Venture-Demo/resource/map/001.png"
+	},
+	{
+		"name":"11_json",
+		"type":"json",
+		"url":"E:/Works/Venture/Venture-Demo/resource/map/11.json"
 	}]
 }
