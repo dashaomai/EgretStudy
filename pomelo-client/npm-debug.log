@@ -1,0 +1,808 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\iojs\\node.exe',
+1 verbose cli   'C:\\Program Files\\iojs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'i',
+1 verbose cli   '-g',
+1 verbose cli   'tsd' ]
+2 info using npm@2.7.5
+3 info using node@v1.6.4
+4 silly cache add args [ 'tsd', null ]
+5 verbose cache add spec tsd
+6 silly cache add parsed spec { raw: 'tsd',
+6 silly cache add   scope: null,
+6 silly cache add   name: 'tsd',
+6 silly cache add   rawSpec: '',
+6 silly cache add   spec: '*',
+6 silly cache add   type: 'range' }
+7 verbose addNamed tsd@*
+8 silly addNamed semver.valid null
+9 silly addNamed semver.validRange *
+10 silly addNameRange { name: 'tsd', range: '*', hasData: false }
+11 silly mapToRegistry name tsd
+12 silly mapToRegistry using default registry
+13 silly mapToRegistry registry https://registry.npmjs.org/
+14 silly mapToRegistry uri https://registry.npmjs.org/tsd
+15 verbose addNameRange registry:https://registry.npmjs.org/tsd not in flight; fetching
+16 verbose request uri https://registry.npmjs.org/tsd
+17 verbose request no auth needed
+18 info attempt registry request try #1 at 18:32:01
+19 verbose request id 0514ffe475639f89
+20 verbose etag "5GDSEQ5Z0TQFFQNAVBR6RMO1L"
+21 http request GET https://registry.npmjs.org/tsd
+22 http 304 https://registry.npmjs.org/tsd
+23 silly get cb [ 304,
+23 silly get   { date: 'Mon, 20 Apr 2015 10:32:01 GMT',
+23 silly get     server: 'Apache',
+23 silly get     via: '1.1 varnish',
+23 silly get     'last-modified': 'Mon, 20 Apr 2015 10:32:01 GMT',
+23 silly get     'cache-control': 'max-age=60',
+23 silly get     etag: '"5GDSEQ5Z0TQFFQNAVBR6RMO1L"',
+23 silly get     age: '26',
+23 silly get     'x-served-by': 'cache-nrt6129-NRT',
+23 silly get     'x-cache': 'HIT',
+23 silly get     'x-cache-hits': '1',
+23 silly get     'x-timer': 'S1429525921.783821,VS0,VE1',
+23 silly get     vary: 'Accept',
+23 silly get     'content-length': '0',
+23 silly get     'keep-alive': 'timeout=10, max=50',
+23 silly get     connection: 'Keep-Alive' } ]
+24 verbose etag https://registry.npmjs.org/tsd from cache
+25 verbose get saving tsd to C:\Users\Bob Jiang\AppData\Roaming\npm-cache\registry.npmjs.org\tsd\.cache.json
+26 silly addNameRange number 2 { name: 'tsd', range: '*', hasData: true }
+27 silly addNameRange versions [ 'tsd',
+27 silly addNameRange   [ '0.1.0',
+27 silly addNameRange     '0.1.1',
+27 silly addNameRange     '0.1.2',
+27 silly addNameRange     '0.2.0',
+27 silly addNameRange     '0.2.1',
+27 silly addNameRange     '0.2.2',
+27 silly addNameRange     '0.3.0',
+27 silly addNameRange     '0.3.1',
+27 silly addNameRange     '0.5.2',
+27 silly addNameRange     '0.5.3',
+27 silly addNameRange     '0.5.5',
+27 silly addNameRange     '0.5.6',
+27 silly addNameRange     '0.5.7',
+27 silly addNameRange     '0.6.0-beta.1',
+27 silly addNameRange     '0.6.0-beta.2',
+27 silly addNameRange     '0.6.0-beta.3',
+27 silly addNameRange     '0.6.0-beta.4',
+27 silly addNameRange     '0.6.0-beta.5' ] ]
+28 verbose addNamed tsd@0.5.7
+29 silly addNamed semver.valid 0.5.7
+30 silly addNamed semver.validRange 0.5.7
+31 silly cache afterAdd tsd@0.5.7
+32 verbose afterAdd C:\Users\Bob Jiang\AppData\Roaming\npm-cache\tsd\0.5.7\package\package.json not in flight; writing
+33 verbose afterAdd C:\Users\Bob Jiang\AppData\Roaming\npm-cache\tsd\0.5.7\package\package.json written
+34 silly install resolved [ { name: 'tsd',
+34 silly install resolved     version: '0.5.7',
+34 silly install resolved     description: 'TypeScript Definition manager for DefinitelyTyped',
+34 silly install resolved     keywords: [ 'typescript', 'definition', 'package', 'manager' ],
+34 silly install resolved     homepage: 'https://github.com/DefinitelyTyped/tsd',
+34 silly install resolved     repository:
+34 silly install resolved      { type: 'git',
+34 silly install resolved        url: 'https://github.com/DefinitelyTyped/tsd.git' },
+34 silly install resolved     author:
+34 silly install resolved      { name: 'Bart van der Schoor',
+34 silly install resolved        url: 'https://github.com/Bartvds' },
+34 silly install resolved     contributors: [ [Object] ],
+34 silly install resolved     licenses: [ [Object] ],
+34 silly install resolved     bugs: { url: 'https://github.com/DefinitelyTyped/tsd/issues' },
+34 silly install resolved     preferGlobal: true,
+34 silly install resolved     engines: { node: '>= 0.10.0 < 0.11.0' },
+34 silly install resolved     main: './build/api.js',
+34 silly install resolved     bin: { tsd: './build/cli.js' },
+34 silly install resolved     scripts: { test: 'grunt test', prepublish: 'grunt pre_publish' },
+34 silly install resolved     dependencies:
+34 silly install resolved      { q: '~0.9.7',
+34 silly install resolved        'q-io': '~1.9.4',
+34 silly install resolved        open: '~0.0.4',
+34 silly install resolved        exit: '~0.1.1',
+34 silly install resolved        mkdirp: '~0.3.5',
+34 silly install resolved        semver: '~2.2.1',
+34 silly install resolved        tv4: '~1.0.14',
+34 silly install resolved        'tv4-reporter': '~0.0.4',
+34 silly install resolved        'uri-templates': '0.1.2',
+34 silly install resolved        minimist: '0.0.7',
+34 silly install resolved        'assertion-error': '1.0.0',
+34 silly install resolved        jsesc: '~0.4.3',
+34 silly install resolved        'js-yaml': '~3.0.1',
+34 silly install resolved        'json-pointer': '~0.1.0',
+34 silly install resolved        ministyle: '~0.1.3',
+34 silly install resolved        miniwrite: '~0.1.3',
+34 silly install resolved        minitable: '~0.0.2',
+34 silly install resolved        'es6-shim': '0.9.1',
+34 silly install resolved        request: '~2.33.0',
+34 silly install resolved        'event-stream': '~3.1.0',
+34 silly install resolved        bufferstream: '~0.6.2',
+34 silly install resolved        'update-notifier': 'git://github.com/Bartvds/update-notifier/#fix/fork',
+34 silly install resolved        'universal-analytics': '~0.3.2',
+34 silly install resolved        uuid: '~1.4.1',
+34 silly install resolved        'weak-map': '~1.0.3',
+34 silly install resolved        'detect-indent': '~0.1.3' },
+34 silly install resolved     devDependencies:
+34 silly install resolved      { 'source-map-support': '~0.2.5',
+34 silly install resolved        grunt: '~0.4.2',
+34 silly install resolved        'grunt-cli': '~0.1.11',
+34 silly install resolved        'gruntfile-gtx': '~0.2.5',
+34 silly install resolved        'grunt-contrib-clean': '~0.5.0',
+34 silly install resolved        'grunt-contrib-copy': '~0.4.1',
+34 silly install resolved        'grunt-contrib-jshint': '~0.7.2',
+34 silly install resolved        'jshint-path-reporter': '~0.1',
+34 silly install resolved        typescript: '0.9.7',
+34 silly install resolved        'grunt-ts': '~1.7.0',
+34 silly install resolved        'grunt-tslint': '~0.4.1',
+34 silly install resolved        'tslint-path-formatter': '~0.1.0',
+34 silly install resolved        'grunt-tv4': '~0.4.0',
+34 silly install resolved        'grunt-shell': '~0.6.1',
+34 silly install resolved        'grunt-contrib-connect': '~0.5.0',
+34 silly install resolved        'grunt-todos': 'git://github.com/Bartvds/grunt-todos/#master',
+34 silly install resolved        'grunt-mocha-test': '~0.8.0',
+34 silly install resolved        'mocha-unfunk-reporter': '~0.4.0',
+34 silly install resolved        chai: 'git://github.com/Bartvds/chai/#fixes/1.8.x',
+34 silly install resolved        'chai-fs': '~0.0.3',
+34 silly install resolved        'chai-fuzzy': '~1.4.0',
+34 silly install resolved        'chai-json-schema': '~1.0.10',
+34 silly install resolved        'chai-as-promised': '~4.1.0',
+34 silly install resolved        'buffer-equal': '0.0.0',
+34 silly install resolved        ansidiff: '~1.0.0',
+34 silly install resolved        'lodash-template': '~1.0.0',
+34 silly install resolved        'grunt-webshot': '~0.2.0',
+34 silly install resolved        'grunt-regex-replace': '~0.2.5',
+34 silly install resolved        'package.json-schema': '~0.2.0' },
+34 silly install resolved     _id: 'tsd@0.5.7',
+34 silly install resolved     dist:
+34 silly install resolved      { shasum: '524bfb437b541467b5cb6111f40744a7538042d1',
+34 silly install resolved        tarball: 'http://registry.npmjs.org/tsd/-/tsd-0.5.7.tgz' },
+34 silly install resolved     _from: 'tsd@*',
+34 silly install resolved     _npmVersion: '1.4.3',
+34 silly install resolved     _npmUser: { name: 'bartvds', email: 'bartvanderschoor@gmail.com' },
+34 silly install resolved     maintainers: [ [Object], [Object] ],
+34 silly install resolved     directories: {},
+34 silly install resolved     _shasum: '524bfb437b541467b5cb6111f40744a7538042d1',
+34 silly install resolved     _resolved: 'https://registry.npmjs.org/tsd/-/tsd-0.5.7.tgz',
+34 silly install resolved     readme: 'ERROR: No README data found!' } ]
+35 info install tsd@0.5.7 into C:\Users\Bob Jiang\AppData\Roaming\npm
+36 info installOne tsd@0.5.7
+37 verbose installOne of tsd to C:\Users\Bob Jiang\AppData\Roaming\npm not in flight; installing
+38 verbose lock using C:\Users\Bob Jiang\AppData\Roaming\npm-cache\_locks\tsd-e7aef2c6a9eb3866.lock for C:\Users\Bob Jiang\AppData\Roaming\npm\node_modules\tsd
+39 warn engine tsd@0.5.7: wanted: {"node":">= 0.10.0 < 0.11.0"} (current: {"node":"1.6.4","npm":"2.7.5"})
+40 silly install write writing tsd 0.5.7 to C:\Users\Bob Jiang\AppData\Roaming\npm\node_modules\tsd
+41 silly cache addNamed cb tsd@0.5.7
+42 verbose unbuild node_modules\tsd
+43 info preuninstall tsd@0.5.7
+44 info uninstall tsd@0.5.7
+45 verbose unbuild rmStuff tsd@0.5.7 from C:\Users\Bob Jiang\AppData\Roaming\npm\node_modules
+46 silly gentlyRm C:\Users\Bob Jiang\AppData\Roaming\npm\tsd.cmd is being gently removed
+47 silly gentlyRm verifying C:\Users\Bob Jiang\AppData\Roaming\npm is an npm working directory
+48 silly gentlyRm containing path C:\Users\Bob Jiang\AppData\Roaming\npm is under npm's control, in C:\Users\Bob Jiang\AppData\Roaming\npm
+49 silly gentlyRm deletion target C:\Users\Bob Jiang\AppData\Roaming\npm\tsd.cmd is under C:\Users\Bob Jiang\AppData\Roaming\npm
+50 verbose gentlyRm vacuuming from C:\Users\Bob Jiang\AppData\Roaming\npm\tsd.cmd up to C:\Users\Bob Jiang\AppData\Roaming\npm
+51 silly gentlyRm C:\Users\Bob Jiang\AppData\Roaming\npm\tsd is being gently removed
+52 silly gentlyRm verifying C:\Users\Bob Jiang\AppData\Roaming\npm is an npm working directory
+53 silly gentlyRm containing path C:\Users\Bob Jiang\AppData\Roaming\npm is under npm's control, in C:\Users\Bob Jiang\AppData\Roaming\npm
+54 silly gentlyRm deletion target C:\Users\Bob Jiang\AppData\Roaming\npm\tsd is under C:\Users\Bob Jiang\AppData\Roaming\npm
+55 verbose gentlyRm vacuuming from C:\Users\Bob Jiang\AppData\Roaming\npm\tsd up to C:\Users\Bob Jiang\AppData\Roaming\npm
+56 info postuninstall tsd@0.5.7
+57 silly gentlyRm C:\Users\Bob Jiang\AppData\Roaming\npm\node_modules\tsd is being purged from base C:\Users\Bob Jiang\AppData\Roaming\npm
+58 verbose gentlyRm don't care about contents; nuking C:\Users\Bob Jiang\AppData\Roaming\npm\node_modules\tsd
+59 silly vacuum-fs purging C:\Users\Bob Jiang\AppData\Roaming\npm\node_modules\tsd
+60 silly vacuum-fs quitting because other entries in C:\Users\Bob Jiang\AppData\Roaming\npm\node_modules
+61 verbose tar unpack C:\Users\Bob Jiang\AppData\Roaming\npm-cache\tsd\0.5.7\package.tgz
+62 verbose tar unpacking to C:\Users\Bob Jiang\AppData\Roaming\npm\node_modules\tsd
+63 silly gentlyRm C:\Users\Bob Jiang\AppData\Roaming\npm\node_modules\tsd is being purged
+64 verbose gentlyRm don't care about contents; nuking C:\Users\Bob Jiang\AppData\Roaming\npm\node_modules\tsd
+65 silly gunzTarPerm modes [ '777', '666' ]
+66 silly gunzTarPerm extractEntry package.json
+67 silly gunzTarPerm extractEntry README.md
+68 silly gunzTarPerm extractEntry build/api.js
+69 silly gunzTarPerm extractEntry build/cli.js
+70 silly gunzTarPerm extractEntry build/.gitattributes
+71 silly gunzTarPerm extractEntry build/api.d.ts
+72 silly gunzTarPerm extractEntry conf/settings.json
+73 silly gunzTarPerm extractEntry schema/cache-v1.json
+74 silly gunzTarPerm extractEntry schema/manage-v1.json
+75 silly gunzTarPerm extractEntry schema/tsd-v4.json
+76 info preinstall tsd@0.5.7
+77 silly prepareForInstallMany adding q@~0.9.7 from tsd dependencies
+78 silly prepareForInstallMany adding q-io@~1.9.4 from tsd dependencies
+79 silly prepareForInstallMany adding open@~0.0.4 from tsd dependencies
+80 silly prepareForInstallMany adding exit@~0.1.1 from tsd dependencies
+81 silly prepareForInstallMany adding mkdirp@~0.3.5 from tsd dependencies
+82 silly prepareForInstallMany adding semver@~2.2.1 from tsd dependencies
+83 silly prepareForInstallMany adding tv4@~1.0.14 from tsd dependencies
+84 silly prepareForInstallMany adding tv4-reporter@~0.0.4 from tsd dependencies
+85 silly prepareForInstallMany adding uri-templates@0.1.2 from tsd dependencies
+86 silly prepareForInstallMany adding minimist@0.0.7 from tsd dependencies
+87 silly prepareForInstallMany adding assertion-error@1.0.0 from tsd dependencies
+88 silly prepareForInstallMany adding jsesc@~0.4.3 from tsd dependencies
+89 silly prepareForInstallMany adding js-yaml@~3.0.1 from tsd dependencies
+90 silly prepareForInstallMany adding json-pointer@~0.1.0 from tsd dependencies
+91 silly prepareForInstallMany adding ministyle@~0.1.3 from tsd dependencies
+92 silly prepareForInstallMany adding miniwrite@~0.1.3 from tsd dependencies
+93 silly prepareForInstallMany adding minitable@~0.0.2 from tsd dependencies
+94 silly prepareForInstallMany adding es6-shim@0.9.1 from tsd dependencies
+95 silly prepareForInstallMany adding request@~2.33.0 from tsd dependencies
+96 silly prepareForInstallMany adding event-stream@~3.1.0 from tsd dependencies
+97 silly prepareForInstallMany adding bufferstream@~0.6.2 from tsd dependencies
+98 silly prepareForInstallMany adding update-notifier@git://github.com/Bartvds/update-notifier/#fix/fork from tsd dependencies
+99 silly prepareForInstallMany adding universal-analytics@~0.3.2 from tsd dependencies
+100 silly prepareForInstallMany adding uuid@~1.4.1 from tsd dependencies
+101 silly prepareForInstallMany adding weak-map@~1.0.3 from tsd dependencies
+102 silly prepareForInstallMany adding detect-indent@~0.1.3 from tsd dependencies
+103 silly cache add args [ 'q@~0.9.7', null ]
+104 verbose cache add spec q@~0.9.7
+105 silly cache add args [ 'q-io@~1.9.4', null ]
+106 verbose cache add spec q-io@~1.9.4
+107 silly cache add parsed spec { raw: 'q@~0.9.7',
+107 silly cache add   scope: null,
+107 silly cache add   name: 'q',
+107 silly cache add   rawSpec: '~0.9.7',
+107 silly cache add   spec: '>=0.9.7 <0.10.0',
+107 silly cache add   type: 'range' }
+108 verbose addNamed q@>=0.9.7 <0.10.0
+109 silly addNamed semver.valid null
+110 silly addNamed semver.validRange >=0.9.7 <0.10.0
+111 silly addNameRange { name: 'q', range: '>=0.9.7 <0.10.0', hasData: false }
+112 silly mapToRegistry name q
+113 silly mapToRegistry using default registry
+114 silly mapToRegistry registry https://registry.npmjs.org/
+115 silly mapToRegistry uri https://registry.npmjs.org/q
+116 verbose addNameRange registry:https://registry.npmjs.org/q not in flight; fetching
+117 silly cache add parsed spec { raw: 'q-io@~1.9.4',
+117 silly cache add   scope: null,
+117 silly cache add   name: 'q-io',
+117 silly cache add   rawSpec: '~1.9.4',
+117 silly cache add   spec: '>=1.9.4 <1.10.0',
+117 silly cache add   type: 'range' }
+118 verbose addNamed q-io@>=1.9.4 <1.10.0
+119 silly addNamed semver.valid null
+120 silly addNamed semver.validRange >=1.9.4 <1.10.0
+121 silly addNameRange { name: 'q-io', range: '>=1.9.4 <1.10.0', hasData: false }
+122 silly mapToRegistry name q-io
+123 silly mapToRegistry using default registry
+124 silly mapToRegistry registry https://registry.npmjs.org/
+125 silly mapToRegistry uri https://registry.npmjs.org/q-io
+126 verbose addNameRange registry:https://registry.npmjs.org/q-io not in flight; fetching
+127 silly cache add args [ 'open@~0.0.4', null ]
+128 verbose cache add spec open@~0.0.4
+129 silly cache add parsed spec { raw: 'open@~0.0.4',
+129 silly cache add   scope: null,
+129 silly cache add   name: 'open',
+129 silly cache add   rawSpec: '~0.0.4',
+129 silly cache add   spec: '>=0.0.4 <0.1.0',
+129 silly cache add   type: 'range' }
+130 verbose addNamed open@>=0.0.4 <0.1.0
+131 silly addNamed semver.valid null
+132 silly addNamed semver.validRange >=0.0.4 <0.1.0
+133 silly addNameRange { name: 'open', range: '>=0.0.4 <0.1.0', hasData: false }
+134 silly mapToRegistry name open
+135 silly mapToRegistry using default registry
+136 silly mapToRegistry registry https://registry.npmjs.org/
+137 silly mapToRegistry uri https://registry.npmjs.org/open
+138 verbose addNameRange registry:https://registry.npmjs.org/open not in flight; fetching
+139 silly cache add args [ 'exit@~0.1.1', null ]
+140 verbose cache add spec exit@~0.1.1
+141 silly cache add parsed spec { raw: 'exit@~0.1.1',
+141 silly cache add   scope: null,
+141 silly cache add   name: 'exit',
+141 silly cache add   rawSpec: '~0.1.1',
+141 silly cache add   spec: '>=0.1.1 <0.2.0',
+141 silly cache add   type: 'range' }
+142 verbose addNamed exit@>=0.1.1 <0.2.0
+143 silly addNamed semver.valid null
+144 silly addNamed semver.validRange >=0.1.1 <0.2.0
+145 silly addNameRange { name: 'exit', range: '>=0.1.1 <0.2.0', hasData: false }
+146 silly mapToRegistry name exit
+147 silly mapToRegistry using default registry
+148 silly mapToRegistry registry https://registry.npmjs.org/
+149 silly mapToRegistry uri https://registry.npmjs.org/exit
+150 verbose addNameRange registry:https://registry.npmjs.org/exit not in flight; fetching
+151 silly cache add args [ 'mkdirp@~0.3.5', null ]
+152 verbose cache add spec mkdirp@~0.3.5
+153 silly cache add parsed spec { raw: 'mkdirp@~0.3.5',
+153 silly cache add   scope: null,
+153 silly cache add   name: 'mkdirp',
+153 silly cache add   rawSpec: '~0.3.5',
+153 silly cache add   spec: '>=0.3.5 <0.4.0',
+153 silly cache add   type: 'range' }
+154 verbose addNamed mkdirp@>=0.3.5 <0.4.0
+155 silly addNamed semver.valid null
+156 silly addNamed semver.validRange >=0.3.5 <0.4.0
+157 silly addNameRange { name: 'mkdirp', range: '>=0.3.5 <0.4.0', hasData: false }
+158 silly mapToRegistry name mkdirp
+159 silly mapToRegistry using default registry
+160 silly mapToRegistry registry https://registry.npmjs.org/
+161 silly mapToRegistry uri https://registry.npmjs.org/mkdirp
+162 verbose addNameRange registry:https://registry.npmjs.org/mkdirp not in flight; fetching
+163 silly cache add args [ 'semver@~2.2.1', null ]
+164 verbose cache add spec semver@~2.2.1
+165 silly cache add parsed spec { raw: 'semver@~2.2.1',
+165 silly cache add   scope: null,
+165 silly cache add   name: 'semver',
+165 silly cache add   rawSpec: '~2.2.1',
+165 silly cache add   spec: '>=2.2.1 <2.3.0',
+165 silly cache add   type: 'range' }
+166 verbose addNamed semver@>=2.2.1 <2.3.0
+167 silly addNamed semver.valid null
+168 silly addNamed semver.validRange >=2.2.1 <2.3.0
+169 silly addNameRange { name: 'semver', range: '>=2.2.1 <2.3.0', hasData: false }
+170 silly mapToRegistry name semver
+171 silly mapToRegistry using default registry
+172 silly mapToRegistry registry https://registry.npmjs.org/
+173 silly mapToRegistry uri https://registry.npmjs.org/semver
+174 verbose addNameRange registry:https://registry.npmjs.org/semver not in flight; fetching
+175 silly cache add args [ 'tv4@~1.0.14', null ]
+176 verbose cache add spec tv4@~1.0.14
+177 silly cache add parsed spec { raw: 'tv4@~1.0.14',
+177 silly cache add   scope: null,
+177 silly cache add   name: 'tv4',
+177 silly cache add   rawSpec: '~1.0.14',
+177 silly cache add   spec: '>=1.0.14 <1.1.0',
+177 silly cache add   type: 'range' }
+178 verbose addNamed tv4@>=1.0.14 <1.1.0
+179 silly addNamed semver.valid null
+180 silly addNamed semver.validRange >=1.0.14 <1.1.0
+181 silly addNameRange { name: 'tv4', range: '>=1.0.14 <1.1.0', hasData: false }
+182 silly mapToRegistry name tv4
+183 silly mapToRegistry using default registry
+184 silly mapToRegistry registry https://registry.npmjs.org/
+185 silly mapToRegistry uri https://registry.npmjs.org/tv4
+186 verbose addNameRange registry:https://registry.npmjs.org/tv4 not in flight; fetching
+187 silly cache add args [ 'tv4-reporter@~0.0.4', null ]
+188 verbose cache add spec tv4-reporter@~0.0.4
+189 silly cache add parsed spec { raw: 'tv4-reporter@~0.0.4',
+189 silly cache add   scope: null,
+189 silly cache add   name: 'tv4-reporter',
+189 silly cache add   rawSpec: '~0.0.4',
+189 silly cache add   spec: '>=0.0.4 <0.1.0',
+189 silly cache add   type: 'range' }
+190 verbose addNamed tv4-reporter@>=0.0.4 <0.1.0
+191 silly addNamed semver.valid null
+192 silly addNamed semver.validRange >=0.0.4 <0.1.0
+193 silly addNameRange { name: 'tv4-reporter', range: '>=0.0.4 <0.1.0', hasData: false }
+194 silly mapToRegistry name tv4-reporter
+195 silly mapToRegistry using default registry
+196 silly mapToRegistry registry https://registry.npmjs.org/
+197 silly mapToRegistry uri https://registry.npmjs.org/tv4-reporter
+198 verbose addNameRange registry:https://registry.npmjs.org/tv4-reporter not in flight; fetching
+199 silly cache add args [ 'uri-templates@0.1.2', null ]
+200 verbose cache add spec uri-templates@0.1.2
+201 silly cache add parsed spec { raw: 'uri-templates@0.1.2',
+201 silly cache add   scope: null,
+201 silly cache add   name: 'uri-templates',
+201 silly cache add   rawSpec: '0.1.2',
+201 silly cache add   spec: '0.1.2',
+201 silly cache add   type: 'version' }
+202 verbose addNamed uri-templates@0.1.2
+203 silly addNamed semver.valid 0.1.2
+204 silly addNamed semver.validRange 0.1.2
+205 silly mapToRegistry name uri-templates
+206 silly mapToRegistry using default registry
+207 silly mapToRegistry registry https://registry.npmjs.org/
+208 silly mapToRegistry uri https://registry.npmjs.org/uri-templates
+209 verbose addNameVersion registry:https://registry.npmjs.org/uri-templates not in flight; fetching
+210 silly cache add args [ 'minimist@0.0.7', null ]
+211 verbose cache add spec minimist@0.0.7
+212 silly cache add parsed spec { raw: 'minimist@0.0.7',
+212 silly cache add   scope: null,
+212 silly cache add   name: 'minimist',
+212 silly cache add   rawSpec: '0.0.7',
+212 silly cache add   spec: '0.0.7',
+212 silly cache add   type: 'version' }
+213 verbose addNamed minimist@0.0.7
+214 silly addNamed semver.valid 0.0.7
+215 silly addNamed semver.validRange 0.0.7
+216 silly mapToRegistry name minimist
+217 silly mapToRegistry using default registry
+218 silly mapToRegistry registry https://registry.npmjs.org/
+219 silly mapToRegistry uri https://registry.npmjs.org/minimist
+220 verbose addNameVersion registry:https://registry.npmjs.org/minimist not in flight; fetching
+221 silly cache add args [ 'assertion-error@1.0.0', null ]
+222 verbose cache add spec assertion-error@1.0.0
+223 silly cache add parsed spec { raw: 'assertion-error@1.0.0',
+223 silly cache add   scope: null,
+223 silly cache add   name: 'assertion-error',
+223 silly cache add   rawSpec: '1.0.0',
+223 silly cache add   spec: '1.0.0',
+223 silly cache add   type: 'version' }
+224 verbose addNamed assertion-error@1.0.0
+225 silly addNamed semver.valid 1.0.0
+226 silly addNamed semver.validRange 1.0.0
+227 silly mapToRegistry name assertion-error
+228 silly mapToRegistry using default registry
+229 silly mapToRegistry registry https://registry.npmjs.org/
+230 silly mapToRegistry uri https://registry.npmjs.org/assertion-error
+231 verbose addNameVersion registry:https://registry.npmjs.org/assertion-error not in flight; fetching
+232 silly cache add args [ 'jsesc@~0.4.3', null ]
+233 verbose cache add spec jsesc@~0.4.3
+234 silly cache add parsed spec { raw: 'jsesc@~0.4.3',
+234 silly cache add   scope: null,
+234 silly cache add   name: 'jsesc',
+234 silly cache add   rawSpec: '~0.4.3',
+234 silly cache add   spec: '>=0.4.3 <0.5.0',
+234 silly cache add   type: 'range' }
+235 verbose addNamed jsesc@>=0.4.3 <0.5.0
+236 silly addNamed semver.valid null
+237 silly addNamed semver.validRange >=0.4.3 <0.5.0
+238 silly addNameRange { name: 'jsesc', range: '>=0.4.3 <0.5.0', hasData: false }
+239 silly mapToRegistry name jsesc
+240 silly mapToRegistry using default registry
+241 silly mapToRegistry registry https://registry.npmjs.org/
+242 silly mapToRegistry uri https://registry.npmjs.org/jsesc
+243 verbose addNameRange registry:https://registry.npmjs.org/jsesc not in flight; fetching
+244 silly cache add args [ 'js-yaml@~3.0.1', null ]
+245 verbose cache add spec js-yaml@~3.0.1
+246 silly cache add parsed spec { raw: 'js-yaml@~3.0.1',
+246 silly cache add   scope: null,
+246 silly cache add   name: 'js-yaml',
+246 silly cache add   rawSpec: '~3.0.1',
+246 silly cache add   spec: '>=3.0.1 <3.1.0',
+246 silly cache add   type: 'range' }
+247 verbose addNamed js-yaml@>=3.0.1 <3.1.0
+248 silly addNamed semver.valid null
+249 silly addNamed semver.validRange >=3.0.1 <3.1.0
+250 silly addNameRange { name: 'js-yaml', range: '>=3.0.1 <3.1.0', hasData: false }
+251 silly mapToRegistry name js-yaml
+252 silly mapToRegistry using default registry
+253 silly mapToRegistry registry https://registry.npmjs.org/
+254 silly mapToRegistry uri https://registry.npmjs.org/js-yaml
+255 verbose addNameRange registry:https://registry.npmjs.org/js-yaml not in flight; fetching
+256 silly cache add args [ 'json-pointer@~0.1.0', null ]
+257 verbose cache add spec json-pointer@~0.1.0
+258 silly cache add parsed spec { raw: 'json-pointer@~0.1.0',
+258 silly cache add   scope: null,
+258 silly cache add   name: 'json-pointer',
+258 silly cache add   rawSpec: '~0.1.0',
+258 silly cache add   spec: '>=0.1.0 <0.2.0',
+258 silly cache add   type: 'range' }
+259 verbose addNamed json-pointer@>=0.1.0 <0.2.0
+260 silly addNamed semver.valid null
+261 silly addNamed semver.validRange >=0.1.0 <0.2.0
+262 silly addNameRange { name: 'json-pointer', range: '>=0.1.0 <0.2.0', hasData: false }
+263 silly mapToRegistry name json-pointer
+264 silly mapToRegistry using default registry
+265 silly mapToRegistry registry https://registry.npmjs.org/
+266 silly mapToRegistry uri https://registry.npmjs.org/json-pointer
+267 verbose addNameRange registry:https://registry.npmjs.org/json-pointer not in flight; fetching
+268 silly cache add args [ 'ministyle@~0.1.3', null ]
+269 verbose cache add spec ministyle@~0.1.3
+270 silly cache add parsed spec { raw: 'ministyle@~0.1.3',
+270 silly cache add   scope: null,
+270 silly cache add   name: 'ministyle',
+270 silly cache add   rawSpec: '~0.1.3',
+270 silly cache add   spec: '>=0.1.3 <0.2.0',
+270 silly cache add   type: 'range' }
+271 verbose addNamed ministyle@>=0.1.3 <0.2.0
+272 silly addNamed semver.valid null
+273 silly addNamed semver.validRange >=0.1.3 <0.2.0
+274 silly addNameRange { name: 'ministyle', range: '>=0.1.3 <0.2.0', hasData: false }
+275 silly mapToRegistry name ministyle
+276 silly mapToRegistry using default registry
+277 silly mapToRegistry registry https://registry.npmjs.org/
+278 silly mapToRegistry uri https://registry.npmjs.org/ministyle
+279 verbose addNameRange registry:https://registry.npmjs.org/ministyle not in flight; fetching
+280 silly cache add args [ 'miniwrite@~0.1.3', null ]
+281 verbose cache add spec miniwrite@~0.1.3
+282 silly cache add parsed spec { raw: 'miniwrite@~0.1.3',
+282 silly cache add   scope: null,
+282 silly cache add   name: 'miniwrite',
+282 silly cache add   rawSpec: '~0.1.3',
+282 silly cache add   spec: '>=0.1.3 <0.2.0',
+282 silly cache add   type: 'range' }
+283 verbose addNamed miniwrite@>=0.1.3 <0.2.0
+284 silly addNamed semver.valid null
+285 silly addNamed semver.validRange >=0.1.3 <0.2.0
+286 silly addNameRange { name: 'miniwrite', range: '>=0.1.3 <0.2.0', hasData: false }
+287 silly mapToRegistry name miniwrite
+288 silly mapToRegistry using default registry
+289 silly mapToRegistry registry https://registry.npmjs.org/
+290 silly mapToRegistry uri https://registry.npmjs.org/miniwrite
+291 verbose addNameRange registry:https://registry.npmjs.org/miniwrite not in flight; fetching
+292 silly cache add args [ 'minitable@~0.0.2', null ]
+293 verbose cache add spec minitable@~0.0.2
+294 silly cache add parsed spec { raw: 'minitable@~0.0.2',
+294 silly cache add   scope: null,
+294 silly cache add   name: 'minitable',
+294 silly cache add   rawSpec: '~0.0.2',
+294 silly cache add   spec: '>=0.0.2 <0.1.0',
+294 silly cache add   type: 'range' }
+295 verbose addNamed minitable@>=0.0.2 <0.1.0
+296 silly addNamed semver.valid null
+297 silly addNamed semver.validRange >=0.0.2 <0.1.0
+298 silly addNameRange { name: 'minitable', range: '>=0.0.2 <0.1.0', hasData: false }
+299 silly mapToRegistry name minitable
+300 silly mapToRegistry using default registry
+301 silly mapToRegistry registry https://registry.npmjs.org/
+302 silly mapToRegistry uri https://registry.npmjs.org/minitable
+303 verbose addNameRange registry:https://registry.npmjs.org/minitable not in flight; fetching
+304 silly cache add args [ 'es6-shim@0.9.1', null ]
+305 verbose cache add spec es6-shim@0.9.1
+306 silly cache add parsed spec { raw: 'es6-shim@0.9.1',
+306 silly cache add   scope: null,
+306 silly cache add   name: 'es6-shim',
+306 silly cache add   rawSpec: '0.9.1',
+306 silly cache add   spec: '0.9.1',
+306 silly cache add   type: 'version' }
+307 verbose addNamed es6-shim@0.9.1
+308 silly addNamed semver.valid 0.9.1
+309 silly addNamed semver.validRange 0.9.1
+310 silly mapToRegistry name es6-shim
+311 silly mapToRegistry using default registry
+312 silly mapToRegistry registry https://registry.npmjs.org/
+313 silly mapToRegistry uri https://registry.npmjs.org/es6-shim
+314 verbose addNameVersion registry:https://registry.npmjs.org/es6-shim not in flight; fetching
+315 silly cache add args [ 'request@~2.33.0', null ]
+316 verbose cache add spec request@~2.33.0
+317 silly cache add parsed spec { raw: 'request@~2.33.0',
+317 silly cache add   scope: null,
+317 silly cache add   name: 'request',
+317 silly cache add   rawSpec: '~2.33.0',
+317 silly cache add   spec: '>=2.33.0 <2.34.0',
+317 silly cache add   type: 'range' }
+318 verbose addNamed request@>=2.33.0 <2.34.0
+319 silly addNamed semver.valid null
+320 silly addNamed semver.validRange >=2.33.0 <2.34.0
+321 silly addNameRange { name: 'request', range: '>=2.33.0 <2.34.0', hasData: false }
+322 silly mapToRegistry name request
+323 silly mapToRegistry using default registry
+324 silly mapToRegistry registry https://registry.npmjs.org/
+325 silly mapToRegistry uri https://registry.npmjs.org/request
+326 verbose addNameRange registry:https://registry.npmjs.org/request not in flight; fetching
+327 silly cache add args [ 'event-stream@~3.1.0', null ]
+328 verbose cache add spec event-stream@~3.1.0
+329 silly cache add parsed spec { raw: 'event-stream@~3.1.0',
+329 silly cache add   scope: null,
+329 silly cache add   name: 'event-stream',
+329 silly cache add   rawSpec: '~3.1.0',
+329 silly cache add   spec: '>=3.1.0 <3.2.0',
+329 silly cache add   type: 'range' }
+330 verbose addNamed event-stream@>=3.1.0 <3.2.0
+331 silly addNamed semver.valid null
+332 silly addNamed semver.validRange >=3.1.0 <3.2.0
+333 silly addNameRange { name: 'event-stream', range: '>=3.1.0 <3.2.0', hasData: false }
+334 silly mapToRegistry name event-stream
+335 silly mapToRegistry using default registry
+336 silly mapToRegistry registry https://registry.npmjs.org/
+337 silly mapToRegistry uri https://registry.npmjs.org/event-stream
+338 verbose addNameRange registry:https://registry.npmjs.org/event-stream not in flight; fetching
+339 silly cache add args [ 'bufferstream@~0.6.2', null ]
+340 verbose cache add spec bufferstream@~0.6.2
+341 silly cache add parsed spec { raw: 'bufferstream@~0.6.2',
+341 silly cache add   scope: null,
+341 silly cache add   name: 'bufferstream',
+341 silly cache add   rawSpec: '~0.6.2',
+341 silly cache add   spec: '>=0.6.2 <0.7.0',
+341 silly cache add   type: 'range' }
+342 verbose addNamed bufferstream@>=0.6.2 <0.7.0
+343 silly addNamed semver.valid null
+344 silly addNamed semver.validRange >=0.6.2 <0.7.0
+345 silly addNameRange { name: 'bufferstream', range: '>=0.6.2 <0.7.0', hasData: false }
+346 silly mapToRegistry name bufferstream
+347 silly mapToRegistry using default registry
+348 silly mapToRegistry registry https://registry.npmjs.org/
+349 silly mapToRegistry uri https://registry.npmjs.org/bufferstream
+350 verbose addNameRange registry:https://registry.npmjs.org/bufferstream not in flight; fetching
+351 silly cache add args [ 'update-notifier@git://github.com/Bartvds/update-notifier/#fix/fork',
+351 silly cache add   null ]
+352 verbose cache add spec update-notifier@git://github.com/Bartvds/update-notifier/#fix/fork
+353 silly cache add args [ 'universal-analytics@~0.3.2', null ]
+354 verbose cache add spec universal-analytics@~0.3.2
+355 silly cache add parsed spec { raw: 'universal-analytics@~0.3.2',
+355 silly cache add   scope: null,
+355 silly cache add   name: 'universal-analytics',
+355 silly cache add   rawSpec: '~0.3.2',
+355 silly cache add   spec: '>=0.3.2 <0.4.0',
+355 silly cache add   type: 'range' }
+356 verbose addNamed universal-analytics@>=0.3.2 <0.4.0
+357 silly addNamed semver.valid null
+358 silly addNamed semver.validRange >=0.3.2 <0.4.0
+359 silly addNameRange { name: 'universal-analytics',
+359 silly addNameRange   range: '>=0.3.2 <0.4.0',
+359 silly addNameRange   hasData: false }
+360 silly mapToRegistry name universal-analytics
+361 silly mapToRegistry using default registry
+362 silly mapToRegistry registry https://registry.npmjs.org/
+363 silly mapToRegistry uri https://registry.npmjs.org/universal-analytics
+364 verbose addNameRange registry:https://registry.npmjs.org/universal-analytics not in flight; fetching
+365 silly cache add args [ 'uuid@~1.4.1', null ]
+366 verbose cache add spec uuid@~1.4.1
+367 silly cache add parsed spec { raw: 'uuid@~1.4.1',
+367 silly cache add   scope: null,
+367 silly cache add   name: 'uuid',
+367 silly cache add   rawSpec: '~1.4.1',
+367 silly cache add   spec: '>=1.4.1 <1.5.0',
+367 silly cache add   type: 'range' }
+368 verbose addNamed uuid@>=1.4.1 <1.5.0
+369 silly addNamed semver.valid null
+370 silly addNamed semver.validRange >=1.4.1 <1.5.0
+371 silly addNameRange { name: 'uuid', range: '>=1.4.1 <1.5.0', hasData: false }
+372 silly mapToRegistry name uuid
+373 silly mapToRegistry using default registry
+374 silly mapToRegistry registry https://registry.npmjs.org/
+375 silly mapToRegistry uri https://registry.npmjs.org/uuid
+376 verbose addNameRange registry:https://registry.npmjs.org/uuid not in flight; fetching
+377 silly cache add args [ 'weak-map@~1.0.3', null ]
+378 verbose cache add spec weak-map@~1.0.3
+379 silly cache add parsed spec { raw: 'weak-map@~1.0.3',
+379 silly cache add   scope: null,
+379 silly cache add   name: 'weak-map',
+379 silly cache add   rawSpec: '~1.0.3',
+379 silly cache add   spec: '>=1.0.3 <1.1.0',
+379 silly cache add   type: 'range' }
+380 verbose addNamed weak-map@>=1.0.3 <1.1.0
+381 silly addNamed semver.valid null
+382 silly addNamed semver.validRange >=1.0.3 <1.1.0
+383 silly addNameRange { name: 'weak-map', range: '>=1.0.3 <1.1.0', hasData: false }
+384 silly mapToRegistry name weak-map
+385 silly mapToRegistry using default registry
+386 silly mapToRegistry registry https://registry.npmjs.org/
+387 silly mapToRegistry uri https://registry.npmjs.org/weak-map
+388 verbose addNameRange registry:https://registry.npmjs.org/weak-map not in flight; fetching
+389 silly cache add args [ 'detect-indent@~0.1.3', null ]
+390 verbose cache add spec detect-indent@~0.1.3
+391 silly cache add parsed spec { raw: 'detect-indent@~0.1.3',
+391 silly cache add   scope: null,
+391 silly cache add   name: 'detect-indent',
+391 silly cache add   rawSpec: '~0.1.3',
+391 silly cache add   spec: '>=0.1.3 <0.2.0',
+391 silly cache add   type: 'range' }
+392 verbose addNamed detect-indent@>=0.1.3 <0.2.0
+393 silly addNamed semver.valid null
+394 silly addNamed semver.validRange >=0.1.3 <0.2.0
+395 silly addNameRange { name: 'detect-indent',
+395 silly addNameRange   range: '>=0.1.3 <0.2.0',
+395 silly addNameRange   hasData: false }
+396 silly mapToRegistry name detect-indent
+397 silly mapToRegistry using default registry
+398 silly mapToRegistry registry https://registry.npmjs.org/
+399 silly mapToRegistry uri https://registry.npmjs.org/detect-indent
+400 verbose addNameRange registry:https://registry.npmjs.org/detect-indent not in flight; fetching
+401 silly cache add parsed spec { raw: 'update-notifier@git://github.com/Bartvds/update-notifier/#fix/fork',
+401 silly cache add   scope: null,
+401 silly cache add   name: 'update-notifier',
+401 silly cache add   rawSpec: 'git://github.com/Bartvds/update-notifier/#fix/fork',
+401 silly cache add   spec: 'git://github.com/Bartvds/update-notifier/#fix/fork',
+401 silly cache add   type: 'git' }
+402 verbose addRemoteGit git-github-com-Bartvds-update-notifier--a420e038 not in flight; caching
+403 verbose request uri https://registry.npmjs.org/open
+404 verbose request no auth needed
+405 info attempt registry request try #1 at 18:32:37
+406 verbose etag "4GMD3T7CXKTNEV8S24BRQP6TN"
+407 http request GET https://registry.npmjs.org/open
+408 verbose request uri https://registry.npmjs.org/q
+409 verbose request no auth needed
+410 info attempt registry request try #1 at 18:32:37
+411 verbose etag "AJV4J0RIZ52EQJCQIGHU77NWD"
+412 http request GET https://registry.npmjs.org/q
+413 verbose request uri https://registry.npmjs.org/mkdirp
+414 verbose request no auth needed
+415 info attempt registry request try #1 at 18:32:37
+416 verbose etag "1AC73JK4JP7FLRSMIQ6O7EHKS"
+417 http request GET https://registry.npmjs.org/mkdirp
+418 verbose request uri https://registry.npmjs.org/tv4
+419 verbose request no auth needed
+420 info attempt registry request try #1 at 18:32:37
+421 verbose etag "3YY59ASGUKHL7EJDSSH1XN1JS"
+422 http request GET https://registry.npmjs.org/tv4
+423 verbose request uri https://registry.npmjs.org/tv4-reporter
+424 verbose request no auth needed
+425 info attempt registry request try #1 at 18:32:37
+426 verbose etag "9J5OGH68V0HF0T1WY2OW0CERU"
+427 http request GET https://registry.npmjs.org/tv4-reporter
+428 verbose request uri https://registry.npmjs.org/semver
+429 verbose request no auth needed
+430 info attempt registry request try #1 at 18:32:37
+431 verbose etag "125FZXTOFC7EY5JKNK4W7EVEO"
+432 http request GET https://registry.npmjs.org/semver
+433 verbose request uri https://registry.npmjs.org/uri-templates
+434 verbose request no auth needed
+435 info attempt registry request try #1 at 18:32:37
+436 verbose etag "AOI2Z977J747NK5B8DPG66MTE"
+437 http request GET https://registry.npmjs.org/uri-templates
+438 verbose request uri https://registry.npmjs.org/exit
+439 verbose request no auth needed
+440 info attempt registry request try #1 at 18:32:37
+441 verbose etag "66GA3RUQR76WJVRZF6ITVOZPO"
+442 http request GET https://registry.npmjs.org/exit
+443 verbose request uri https://registry.npmjs.org/assertion-error
+444 verbose request no auth needed
+445 info attempt registry request try #1 at 18:32:37
+446 verbose etag "BJL2LAINTDVUHAXDJDJN4XKK2"
+447 http request GET https://registry.npmjs.org/assertion-error
+448 verbose request uri https://registry.npmjs.org/jsesc
+449 verbose request no auth needed
+450 info attempt registry request try #1 at 18:32:37
+451 verbose etag "3BM9BM0BYB7UKLJRC6JZUDSLK"
+452 http request GET https://registry.npmjs.org/jsesc
+453 verbose request uri https://registry.npmjs.org/json-pointer
+454 verbose request no auth needed
+455 info attempt registry request try #1 at 18:32:37
+456 verbose etag "2BP3HZ2F6VGAA1SKAF2BOHF8C"
+457 http request GET https://registry.npmjs.org/json-pointer
+458 verbose request uri https://registry.npmjs.org/minimist
+459 verbose request no auth needed
+460 info attempt registry request try #1 at 18:32:37
+461 verbose etag "CEX0FSU5O43OUXA3I1GZKJI10"
+462 http request GET https://registry.npmjs.org/minimist
+463 verbose request uri https://registry.npmjs.org/ministyle
+464 verbose request no auth needed
+465 info attempt registry request try #1 at 18:32:37
+466 verbose etag "5DORT1DW2QGT404UBLSAS76UO"
+467 http request GET https://registry.npmjs.org/ministyle
+468 verbose request uri https://registry.npmjs.org/minitable
+469 verbose request no auth needed
+470 info attempt registry request try #1 at 18:32:37
+471 verbose etag "6A7Y0RPWMZKM4KT8MLEOZ5ELR"
+472 http request GET https://registry.npmjs.org/minitable
+473 verbose request uri https://registry.npmjs.org/js-yaml
+474 verbose request no auth needed
+475 info attempt registry request try #1 at 18:32:37
+476 verbose etag "D0VI7Q30ZOFVK305URQG9VZQD"
+477 http request GET https://registry.npmjs.org/js-yaml
+478 verbose request uri https://registry.npmjs.org/q-io
+479 verbose request no auth needed
+480 info attempt registry request try #1 at 18:32:37
+481 verbose etag "EZUJZKTJK1DZEA9MT7VMH14BD"
+482 http request GET https://registry.npmjs.org/q-io
+483 verbose request uri https://registry.npmjs.org/es6-shim
+484 verbose request no auth needed
+485 info attempt registry request try #1 at 18:32:37
+486 verbose etag "6RCMTHRMRGMZK5V31YF5LUEXI"
+487 http request GET https://registry.npmjs.org/es6-shim
+488 verbose request uri https://registry.npmjs.org/event-stream
+489 verbose request no auth needed
+490 info attempt registry request try #1 at 18:32:37
+491 verbose etag "CHKGYG3SOBFXAS47PDO42F0VU"
+492 http request GET https://registry.npmjs.org/event-stream
+493 verbose request uri https://registry.npmjs.org/universal-analytics
+494 verbose request no auth needed
+495 info attempt registry request try #1 at 18:32:37
+496 verbose etag "EW4THRMEJOW8768MH35ZBEZM6"
+497 http request GET https://registry.npmjs.org/universal-analytics
+498 verbose request uri https://registry.npmjs.org/request
+499 verbose request no auth needed
+500 info attempt registry request try #1 at 18:32:37
+501 verbose etag "40FTTFVVGGH51OIZ52TJWMITJ"
+502 http request GET https://registry.npmjs.org/request
+503 verbose request uri https://registry.npmjs.org/weak-map
+504 verbose request no auth needed
+505 info attempt registry request try #1 at 18:32:37
+506 verbose etag "74UD2JWT73EOEYXBUQ9QJHM3"
+507 http request GET https://registry.npmjs.org/weak-map
+508 verbose request uri https://registry.npmjs.org/uuid
+509 verbose request no auth needed
+510 info attempt registry request try #1 at 18:32:37
+511 verbose etag "D7S0RPEMGP8580ZX0GQWUURWB"
+512 http request GET https://registry.npmjs.org/uuid
+513 verbose request uri https://registry.npmjs.org/bufferstream
+514 verbose request no auth needed
+515 info attempt registry request try #1 at 18:32:37
+516 verbose etag "EF39L4RVY281I2DYGLB0UIOO1"
+517 http request GET https://registry.npmjs.org/bufferstream
+518 verbose request uri https://registry.npmjs.org/detect-indent
+519 verbose request no auth needed
+520 info attempt registry request try #1 at 18:32:37
+521 verbose etag "65AHAWKOAS49G3W23GDKU0K1N"
+522 http request GET https://registry.npmjs.org/detect-indent
+523 verbose request uri https://registry.npmjs.org/miniwrite
+524 verbose request no auth needed
+525 info attempt registry request try #1 at 18:32:37
+526 verbose etag "CA4T3M84I99SLY08I2AG2F6E1"
+527 http request GET https://registry.npmjs.org/miniwrite
+528 verbose stack TypeError: Cannot read property 'trim' of undefined
+528 verbose stack     at C:\Program Files\iojs\node_modules\npm\lib\cache\add-remote-git.js:98:31
+528 verbose stack     at C:\Program Files\iojs\node_modules\npm\lib\utils\git.js:50:14
+528 verbose stack     at F (C:\Program Files\iojs\node_modules\npm\node_modules\which\which.js:40:25)
+528 verbose stack     at E (C:\Program Files\iojs\node_modules\npm\node_modules\which\which.js:43:29)
+528 verbose stack     at C:\Program Files\iojs\node_modules\npm\node_modules\which\which.js:54:16
+528 verbose stack     at FSReqWrap.oncomplete (fs.js:77:15)
+529 verbose cwd E:\MyStudy\Egret\pomelo-client
+530 error Windows_NT 6.1.7601
+531 error argv "C:\\Program Files\\iojs\\node.exe" "C:\\Program Files\\iojs\\node_modules\\npm\\bin\\npm-cli.js" "i" "-g" "tsd"
+532 error node v1.6.4
+533 error npm  v2.7.5
+534 error Cannot read property 'trim' of undefined
+535 error If you need help, you may report this error at:
+535 error     <https://github.com/npm/npm/issues>
+536 verbose exit [ 1, true ]

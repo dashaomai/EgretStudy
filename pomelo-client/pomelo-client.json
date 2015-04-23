@@ -1,0 +1,8 @@
+{
+  "name": "Pomelo Client in WebSocket",
+  "source": "src/pomelo-client",
+  "file_list": [
+    "pomelo-client.js",
+    "pomelo-client.d.ts"
+  ]
+}
