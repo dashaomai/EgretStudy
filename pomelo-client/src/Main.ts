@@ -163,6 +163,10 @@ class Main extends egret.DisplayObjectContainer {
             }, function (response:any):void {
                 egret.Logger.info('已经连接成功，即将发送消息！');
 
+                pomelo.on('close', function(response:any):void {
+                    egret.Logger.info('关闭了！');
+                });
+
                 pomelo.on('onHi', function(response:any):void {
                     egret.Logger.info('获得来自服务器的推送消息：' + response.msg);
                 });
