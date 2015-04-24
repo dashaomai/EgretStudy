@@ -25,23 +25,23 @@
 15 verbose addNameRange registry:https://registry.npmjs.org/tsd not in flight; fetching
 16 verbose request uri https://registry.npmjs.org/tsd
 17 verbose request no auth needed
-18 info attempt registry request try #1 at 18:32:01
-19 verbose request id 0514ffe475639f89
+18 info attempt registry request try #1 at 10:36:34
+19 verbose request id 679436f98489d578
 20 verbose etag "5GDSEQ5Z0TQFFQNAVBR6RMO1L"
 21 http request GET https://registry.npmjs.org/tsd
 22 http 304 https://registry.npmjs.org/tsd
 23 silly get cb [ 304,
-23 silly get   { date: 'Mon, 20 Apr 2015 10:32:01 GMT',
+23 silly get   { date: 'Fri, 24 Apr 2015 02:36:40 GMT',
 23 silly get     server: 'Apache',
 23 silly get     via: '1.1 varnish',
-23 silly get     'last-modified': 'Mon, 20 Apr 2015 10:32:01 GMT',
+23 silly get     'last-modified': 'Fri, 24 Apr 2015 02:36:40 GMT',
 23 silly get     'cache-control': 'max-age=60',
 23 silly get     etag: '"5GDSEQ5Z0TQFFQNAVBR6RMO1L"',
-23 silly get     age: '26',
-23 silly get     'x-served-by': 'cache-nrt6129-NRT',
+23 silly get     age: '40',
+23 silly get     'x-served-by': 'cache-nrt6120-NRT',
 23 silly get     'x-cache': 'HIT',
 23 silly get     'x-cache-hits': '1',
-23 silly get     'x-timer': 'S1429525921.783821,VS0,VE1',
+23 silly get     'x-timer': 'S1429843000.132669,VS0,VE1',
 23 silly get     vary: 'Accept',
 23 silly get     'content-length': '0',
 23 silly get     'keep-alive': 'timeout=10, max=50',
@@ -665,131 +665,131 @@
 401 silly cache add   spec: 'git://github.com/Bartvds/update-notifier/#fix/fork',
 401 silly cache add   type: 'git' }
 402 verbose addRemoteGit git-github-com-Bartvds-update-notifier--a420e038 not in flight; caching
-403 verbose request uri https://registry.npmjs.org/open
+403 verbose request uri https://registry.npmjs.org/exit
 404 verbose request no auth needed
-405 info attempt registry request try #1 at 18:32:37
-406 verbose etag "4GMD3T7CXKTNEV8S24BRQP6TN"
-407 http request GET https://registry.npmjs.org/open
-408 verbose request uri https://registry.npmjs.org/q
+405 info attempt registry request try #1 at 10:36:35
+406 verbose etag "66GA3RUQR76WJVRZF6ITVOZPO"
+407 http request GET https://registry.npmjs.org/exit
+408 verbose request uri https://registry.npmjs.org/q-io
 409 verbose request no auth needed
-410 info attempt registry request try #1 at 18:32:37
-411 verbose etag "AJV4J0RIZ52EQJCQIGHU77NWD"
-412 http request GET https://registry.npmjs.org/q
-413 verbose request uri https://registry.npmjs.org/mkdirp
+410 info attempt registry request try #1 at 10:36:35
+411 verbose etag "EZUJZKTJK1DZEA9MT7VMH14BD"
+412 http request GET https://registry.npmjs.org/q-io
+413 verbose request uri https://registry.npmjs.org/open
 414 verbose request no auth needed
-415 info attempt registry request try #1 at 18:32:37
-416 verbose etag "1AC73JK4JP7FLRSMIQ6O7EHKS"
-417 http request GET https://registry.npmjs.org/mkdirp
-418 verbose request uri https://registry.npmjs.org/tv4
+415 info attempt registry request try #1 at 10:36:35
+416 verbose etag "4GMD3T7CXKTNEV8S24BRQP6TN"
+417 http request GET https://registry.npmjs.org/open
+418 verbose request uri https://registry.npmjs.org/q
 419 verbose request no auth needed
-420 info attempt registry request try #1 at 18:32:37
-421 verbose etag "3YY59ASGUKHL7EJDSSH1XN1JS"
-422 http request GET https://registry.npmjs.org/tv4
-423 verbose request uri https://registry.npmjs.org/tv4-reporter
+420 info attempt registry request try #1 at 10:36:35
+421 verbose etag "AJV4J0RIZ52EQJCQIGHU77NWD"
+422 http request GET https://registry.npmjs.org/q
+423 verbose request uri https://registry.npmjs.org/mkdirp
 424 verbose request no auth needed
-425 info attempt registry request try #1 at 18:32:37
-426 verbose etag "9J5OGH68V0HF0T1WY2OW0CERU"
-427 http request GET https://registry.npmjs.org/tv4-reporter
+425 info attempt registry request try #1 at 10:36:35
+426 verbose etag "1AC73JK4JP7FLRSMIQ6O7EHKS"
+427 http request GET https://registry.npmjs.org/mkdirp
 428 verbose request uri https://registry.npmjs.org/semver
 429 verbose request no auth needed
-430 info attempt registry request try #1 at 18:32:37
+430 info attempt registry request try #1 at 10:36:35
 431 verbose etag "125FZXTOFC7EY5JKNK4W7EVEO"
 432 http request GET https://registry.npmjs.org/semver
-433 verbose request uri https://registry.npmjs.org/uri-templates
+433 verbose request uri https://registry.npmjs.org/tv4
 434 verbose request no auth needed
-435 info attempt registry request try #1 at 18:32:37
-436 verbose etag "AOI2Z977J747NK5B8DPG66MTE"
-437 http request GET https://registry.npmjs.org/uri-templates
-438 verbose request uri https://registry.npmjs.org/exit
+435 info attempt registry request try #1 at 10:36:35
+436 verbose etag "3YY59ASGUKHL7EJDSSH1XN1JS"
+437 http request GET https://registry.npmjs.org/tv4
+438 verbose request uri https://registry.npmjs.org/uri-templates
 439 verbose request no auth needed
-440 info attempt registry request try #1 at 18:32:37
-441 verbose etag "66GA3RUQR76WJVRZF6ITVOZPO"
-442 http request GET https://registry.npmjs.org/exit
-443 verbose request uri https://registry.npmjs.org/assertion-error
+440 info attempt registry request try #1 at 10:36:35
+441 verbose etag "AOI2Z977J747NK5B8DPG66MTE"
+442 http request GET https://registry.npmjs.org/uri-templates
+443 verbose request uri https://registry.npmjs.org/tv4-reporter
 444 verbose request no auth needed
-445 info attempt registry request try #1 at 18:32:37
-446 verbose etag "BJL2LAINTDVUHAXDJDJN4XKK2"
-447 http request GET https://registry.npmjs.org/assertion-error
-448 verbose request uri https://registry.npmjs.org/jsesc
+445 info attempt registry request try #1 at 10:36:35
+446 verbose etag "9J5OGH68V0HF0T1WY2OW0CERU"
+447 http request GET https://registry.npmjs.org/tv4-reporter
+448 verbose request uri https://registry.npmjs.org/assertion-error
 449 verbose request no auth needed
-450 info attempt registry request try #1 at 18:32:37
-451 verbose etag "3BM9BM0BYB7UKLJRC6JZUDSLK"
-452 http request GET https://registry.npmjs.org/jsesc
+450 info attempt registry request try #1 at 10:36:35
+451 verbose etag "BJL2LAINTDVUHAXDJDJN4XKK2"
+452 http request GET https://registry.npmjs.org/assertion-error
 453 verbose request uri https://registry.npmjs.org/json-pointer
 454 verbose request no auth needed
-455 info attempt registry request try #1 at 18:32:37
+455 info attempt registry request try #1 at 10:36:35
 456 verbose etag "2BP3HZ2F6VGAA1SKAF2BOHF8C"
 457 http request GET https://registry.npmjs.org/json-pointer
 458 verbose request uri https://registry.npmjs.org/minimist
 459 verbose request no auth needed
-460 info attempt registry request try #1 at 18:32:37
+460 info attempt registry request try #1 at 10:36:35
 461 verbose etag "CEX0FSU5O43OUXA3I1GZKJI10"
 462 http request GET https://registry.npmjs.org/minimist
-463 verbose request uri https://registry.npmjs.org/ministyle
+463 verbose request uri https://registry.npmjs.org/jsesc
 464 verbose request no auth needed
-465 info attempt registry request try #1 at 18:32:37
-466 verbose etag "5DORT1DW2QGT404UBLSAS76UO"
-467 http request GET https://registry.npmjs.org/ministyle
-468 verbose request uri https://registry.npmjs.org/minitable
+465 info attempt registry request try #1 at 10:36:35
+466 verbose etag "3BM9BM0BYB7UKLJRC6JZUDSLK"
+467 http request GET https://registry.npmjs.org/jsesc
+468 verbose request uri https://registry.npmjs.org/js-yaml
 469 verbose request no auth needed
-470 info attempt registry request try #1 at 18:32:37
-471 verbose etag "6A7Y0RPWMZKM4KT8MLEOZ5ELR"
-472 http request GET https://registry.npmjs.org/minitable
-473 verbose request uri https://registry.npmjs.org/js-yaml
+470 info attempt registry request try #1 at 10:36:35
+471 verbose etag "D0VI7Q30ZOFVK305URQG9VZQD"
+472 http request GET https://registry.npmjs.org/js-yaml
+473 verbose request uri https://registry.npmjs.org/ministyle
 474 verbose request no auth needed
-475 info attempt registry request try #1 at 18:32:37
-476 verbose etag "D0VI7Q30ZOFVK305URQG9VZQD"
-477 http request GET https://registry.npmjs.org/js-yaml
-478 verbose request uri https://registry.npmjs.org/q-io
+475 info attempt registry request try #1 at 10:36:35
+476 verbose etag "5DORT1DW2QGT404UBLSAS76UO"
+477 http request GET https://registry.npmjs.org/ministyle
+478 verbose request uri https://registry.npmjs.org/miniwrite
 479 verbose request no auth needed
-480 info attempt registry request try #1 at 18:32:37
-481 verbose etag "EZUJZKTJK1DZEA9MT7VMH14BD"
-482 http request GET https://registry.npmjs.org/q-io
-483 verbose request uri https://registry.npmjs.org/es6-shim
+480 info attempt registry request try #1 at 10:36:35
+481 verbose etag "CA4T3M84I99SLY08I2AG2F6E1"
+482 http request GET https://registry.npmjs.org/miniwrite
+483 verbose request uri https://registry.npmjs.org/minitable
 484 verbose request no auth needed
-485 info attempt registry request try #1 at 18:32:37
-486 verbose etag "6RCMTHRMRGMZK5V31YF5LUEXI"
-487 http request GET https://registry.npmjs.org/es6-shim
-488 verbose request uri https://registry.npmjs.org/event-stream
+485 info attempt registry request try #1 at 10:36:35
+486 verbose etag "6A7Y0RPWMZKM4KT8MLEOZ5ELR"
+487 http request GET https://registry.npmjs.org/minitable
+488 verbose request uri https://registry.npmjs.org/es6-shim
 489 verbose request no auth needed
-490 info attempt registry request try #1 at 18:32:37
-491 verbose etag "CHKGYG3SOBFXAS47PDO42F0VU"
-492 http request GET https://registry.npmjs.org/event-stream
-493 verbose request uri https://registry.npmjs.org/universal-analytics
+490 info attempt registry request try #1 at 10:36:35
+491 verbose etag "6RCMTHRMRGMZK5V31YF5LUEXI"
+492 http request GET https://registry.npmjs.org/es6-shim
+493 verbose request uri https://registry.npmjs.org/bufferstream
 494 verbose request no auth needed
-495 info attempt registry request try #1 at 18:32:37
-496 verbose etag "EW4THRMEJOW8768MH35ZBEZM6"
-497 http request GET https://registry.npmjs.org/universal-analytics
+495 info attempt registry request try #1 at 10:36:35
+496 verbose etag "EF39L4RVY281I2DYGLB0UIOO1"
+497 http request GET https://registry.npmjs.org/bufferstream
 498 verbose request uri https://registry.npmjs.org/request
 499 verbose request no auth needed
-500 info attempt registry request try #1 at 18:32:37
+500 info attempt registry request try #1 at 10:36:35
 501 verbose etag "40FTTFVVGGH51OIZ52TJWMITJ"
 502 http request GET https://registry.npmjs.org/request
-503 verbose request uri https://registry.npmjs.org/weak-map
+503 verbose request uri https://registry.npmjs.org/event-stream
 504 verbose request no auth needed
-505 info attempt registry request try #1 at 18:32:37
-506 verbose etag "74UD2JWT73EOEYXBUQ9QJHM3"
-507 http request GET https://registry.npmjs.org/weak-map
-508 verbose request uri https://registry.npmjs.org/uuid
+505 info attempt registry request try #1 at 10:36:35
+506 verbose etag "CHKGYG3SOBFXAS47PDO42F0VU"
+507 http request GET https://registry.npmjs.org/event-stream
+508 verbose request uri https://registry.npmjs.org/weak-map
 509 verbose request no auth needed
-510 info attempt registry request try #1 at 18:32:37
-511 verbose etag "D7S0RPEMGP8580ZX0GQWUURWB"
-512 http request GET https://registry.npmjs.org/uuid
-513 verbose request uri https://registry.npmjs.org/bufferstream
+510 info attempt registry request try #1 at 10:36:35
+511 verbose etag "74UD2JWT73EOEYXBUQ9QJHM3"
+512 http request GET https://registry.npmjs.org/weak-map
+513 verbose request uri https://registry.npmjs.org/universal-analytics
 514 verbose request no auth needed
-515 info attempt registry request try #1 at 18:32:37
-516 verbose etag "EF39L4RVY281I2DYGLB0UIOO1"
-517 http request GET https://registry.npmjs.org/bufferstream
+515 info attempt registry request try #1 at 10:36:35
+516 verbose etag "EW4THRMEJOW8768MH35ZBEZM6"
+517 http request GET https://registry.npmjs.org/universal-analytics
 518 verbose request uri https://registry.npmjs.org/detect-indent
 519 verbose request no auth needed
-520 info attempt registry request try #1 at 18:32:37
+520 info attempt registry request try #1 at 10:36:35
 521 verbose etag "65AHAWKOAS49G3W23GDKU0K1N"
 522 http request GET https://registry.npmjs.org/detect-indent
-523 verbose request uri https://registry.npmjs.org/miniwrite
+523 verbose request uri https://registry.npmjs.org/uuid
 524 verbose request no auth needed
-525 info attempt registry request try #1 at 18:32:37
-526 verbose etag "CA4T3M84I99SLY08I2AG2F6E1"
-527 http request GET https://registry.npmjs.org/miniwrite
+525 info attempt registry request try #1 at 10:36:35
+526 verbose etag "D7S0RPEMGP8580ZX0GQWUURWB"
+527 http request GET https://registry.npmjs.org/uuid
 528 verbose stack TypeError: Cannot read property 'trim' of undefined
 528 verbose stack     at C:\Program Files\iojs\node_modules\npm\lib\cache\add-remote-git.js:98:31
 528 verbose stack     at C:\Program Files\iojs\node_modules\npm\lib\utils\git.js:50:14

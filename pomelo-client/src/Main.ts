@@ -152,8 +152,8 @@ class Main extends egret.DisplayObjectContainer {
         var host:string = "iojs.clevercells.com";
         var port:string = "3010";
 
-        //var pomelo:PomeloClient;
-        //pomelo = new PomeloClient();
+        var pomelo:Pomelo;
+        pomelo = new Pomelo();
 
         pomelo.init(
             {
