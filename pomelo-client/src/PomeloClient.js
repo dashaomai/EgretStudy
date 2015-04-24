@@ -3,6 +3,161 @@
  */
 (function(root, ByteArray) {
 
+  /***** Emitter *****/
+
+
+  /**
+   * Initialize a new `Emitter`.
+   *
+   * @api public
+   */
+
+  function Emitter(obj) {
+    if (obj) return mixin(obj);
+  }
+
+  /**
+   * Mixin the emitter properties.
+   *
+   * @param {Object} obj
+   * @return {Object}
+   * @api private
+   */
+
+  function mixin(obj) {
+    for (var key in Emitter.prototype) {
+      obj[key] = Emitter.prototype[key];
+    }
+    return obj;
+  }
+
+  /**
+   * Listen on the given `event` with `fn`.
+   *
+   * @param {String} event
+   * @param {Function} fn
+   * @return {Emitter}
+   * @api public
+   */
+
+  Emitter.prototype.on = function(event, fn){
+    this._callbacks = this._callbacks || {};
+    (this._callbacks[event] = this._callbacks[event] || [])
+        .push(fn);
+    return this;
+  };
+
+  /**
+   * Adds an `event` listener that will be invoked a single
+   * time then automatically removed.
+   *
+   * @param {String} event
+   * @param {Function} fn
+   * @return {Emitter}
+   * @api public
+   */
+
+  Emitter.prototype.once = function(event, fn){
+    var self = this;
+    this._callbacks = this._callbacks || {};
+
+    function on() {
+      self.off(event, on);
+      fn.apply(this, arguments);
+    }
+
+    fn._off = on;
+    this.on(event, on);
+    return this;
+  };
+
+  /**
+   * Remove the given callback for `event` or all
+   * registered callbacks.
+   *
+   * @param {String} event
+   * @param {Function} fn
+   * @return {Emitter}
+   * @api public
+   */
+
+  Emitter.prototype.off =
+      Emitter.prototype.removeListener =
+          Emitter.prototype.removeAllListeners = function(event, fn){
+            this._callbacks = this._callbacks || {};
+
+            // all
+            if (0 == arguments.length) {
+              this._callbacks = {};
+              return this;
+            }
+
+            // specific event
+            var callbacks = this._callbacks[event];
+            if (!callbacks) return this;
+
+            // remove all handlers
+            if (1 == arguments.length) {
+              delete this._callbacks[event];
+              return this;
+            }
+
+            // remove specific handler
+            var i = index(callbacks, fn._off || fn);
+            if (~i) callbacks.splice(i, 1);
+            return this;
+          };
+
+  /**
+   * Emit `event` with the given args.
+   *
+   * @param {String} event
+   * @param {Mixed} ...
+   * @return {Emitter}
+   */
+
+  Emitter.prototype.emit = function(event){
+    this._callbacks = this._callbacks || {};
+    var args = [].slice.call(arguments, 1)
+        , callbacks = this._callbacks[event];
+
+    if (callbacks) {
+      callbacks = callbacks.slice(0);
+      for (var i = 0, len = callbacks.length; i < len; ++i) {
+        callbacks[i].apply(this, args);
+      }
+    }
+
+    return this;
+  };
+
+  /**
+   * Return array of callbacks for `event`.
+   *
+   * @param {String} event
+   * @return {Array}
+   * @api public
+   */
+
+  Emitter.prototype.listeners = function(event){
+    this._callbacks = this._callbacks || {};
+    return this._callbacks[event] || [];
+  };
+
+  /**
+   * Check if this emitter has `event` handlers.
+   *
+   * @param {String} event
+   * @return {Boolean}
+   * @api public
+   */
+
+  Emitter.prototype.hasListeners = function(event){
+    return !! this.listeners(event).length;
+  };
+
+  /***** end fo Emitter *****/
+
   /***** Protocol *****/
 
   var PKG_HEAD_BYTES = 4;
@@ -929,9 +1084,7 @@
   /***** Pomelo *****/
 
   var JS_WS_CLIENT_TYPE = 'js-websocket';
-  var JS_WS_CLIENT_VERSION = '0.0.1';
-
-  var EventEmitter = window.EventEmitter;
+  var JS_WS_CLIENT_VERSION = '0.0.5';
 
   var RES_OK = 200;
   var RES_FAIL = 500;
@@ -976,6 +1129,9 @@
   Pomelo.reqId = 0;
 
   var pomelo = Pomelo.prototype;
+
+  // extend the prototype methods from Emitter
+  mixin(pomelo);
 
   pomelo.init = function(params, cb){
     this.initCallback = cb;
