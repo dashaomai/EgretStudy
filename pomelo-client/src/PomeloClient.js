@@ -1276,14 +1276,14 @@
       self.send(obj);
 
       self.nextHeartbeatTimeout = Date.now() + self.heartbeatTimeout;
-      self.heartbeatTimeoutId = setTimeout(self.heartbeatTimeoutCb, self.heartbeatTimeout);
+      self.heartbeatTimeoutId = setTimeout(self.heartbeatTimeoutCb.bind(self), self.heartbeatTimeout);
     }, this.heartbeatInterval);
   };
 
   pomelo.heartbeatTimeoutCb = function() {
     var gap = this.nextHeartbeatTimeout - Date.now();
-    if(gap > gapThreshold) {
-      this.heartbeatTimeoutId = setTimeout(this.heartbeatTimeoutCb, gap);
+    if(gap > this.gapThreshold) {
+      this.heartbeatTimeoutId = setTimeout(this.heartbeatTimeoutCb.bind(this), gap);
     } else {
       console.error('server heartbeat timeout');
       this.emit('heartbeat timeout');
