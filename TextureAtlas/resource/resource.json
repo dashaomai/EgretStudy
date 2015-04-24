@@ -1,0 +1,34 @@
+{
+	"groups":[
+	{
+		"keys":"bgImage,egretIcon,test_json,test_png",
+		"name":"preload"
+	}],
+	"resources":[
+	{
+		"name":"bgImage",
+		"type":"image",
+		"url":"assets/bg.jpg"
+	},
+	{
+		"name":"egretIcon",
+		"type":"image",
+		"url":"assets/egret_icon.png"
+	},
+	{
+		"name":"description",
+		"type":"json",
+		"url":"config/description.json"
+	},
+	{
+		"name":"test_json",
+		"subkeys":"ui_anjian1_png,ui_anjian2_png,ui_anjian_png,ui_anniu3_png,ui_chengzhen_png,ui_dajiantou_png,ui_daojudian_png,ui_dikuang_png,ui_dingdan_png,ui_duiwu_png,ui_fangjudian_png,ui_fengexian_png,ui_jianzao_png,ui_libaojianglianniu_png,ui_maoxianzhe_png,ui_meiriqiandaoanniu_png,ui_migong_png,ui_mofata_png,ui_paiminganniu_png,ui_renwu_png,ui_shezhianniu_png,ui_wenzi1_png,ui_wenzi2_png,ui_wuqidian_png,ui_xiaojiantou_png,ui_xunlian_png,ui_xunliansuo_png,ui_zhandou_png,ui_zhizao_png,ui_zhongzhi_png,ui_zhongzhiyuan_png",
+		"type":"sheet",
+		"url":"assets/test.json"
+	},
+	{
+		"name":"test_png",
+		"type":"image",
+		"url":"assets/test.png"
+	}]
+}
