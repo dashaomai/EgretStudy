@@ -173,7 +173,7 @@ class Main extends egret.DisplayObjectContainer {
                     function (response:any):void {
                         egret.Logger.info('请求已返回！' + response.msg);
                     }
-                )
+                );
             }
         )
     }
