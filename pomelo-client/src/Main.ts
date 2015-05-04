@@ -161,6 +161,9 @@ class Main extends egret.DisplayObjectContainer {
                 port: port,
                 log: true
             }, function (response:any):void {
+                if (response.code !== 200)
+                    return;
+
                 egret.Logger.info('已经连接成功，即将发送消息！');
 
                 pomelo.on('close', function(response:any):void {
@@ -172,10 +175,34 @@ class Main extends egret.DisplayObjectContainer {
                 });
 
                 pomelo.request(
-                    'connector.entryHandler.entry',
-                    'hello pomelo && egret',
+                    'gate.queryHandler.queryConnector',
+                    {username: 'Bob Jiang', password: '123456', token: 'aaabbb'},
                     function (response:any):void {
-                        egret.Logger.info('请求已返回！' + response.msg);
+                        if (response.code !== 200)
+                            return;
+
+                        egret.Logger.info('请求已返回！');
+
+                        var id = response.id;
+
+                        pomelo.init({
+                            host: response.host,
+                            port: response.port,
+                        }, function(response:any):void {
+                            if (response.code !== 200)
+                                return;
+
+                            pomelo.request(
+                                'connector.entryHandler.entry',
+                                {id: id},
+                                function(response:any):void {
+                                    if (response.code !== 200)
+                                        return;
+
+                                    egret.Logger.info('到 connector 的请求已返回：' + JSON.stringify(response.player));
+                                }
+                            )
+                        });
                     }
                 );
             }
