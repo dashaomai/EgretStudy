@@ -144,6 +144,7 @@ var egret;
         //全屏键盘
         __egretProto__.showScreenKeyboard = function () {
             var self = this;
+            self.dispatchEvent(new egret.Event("blur"));
             egret_native.EGT_TextInput = function (appendText) {
                 if (self._multiline) {
                     if (self.isFinishDown) {
@@ -163,7 +164,6 @@ var egret;
             };
             //点击完成
             egret_native.EGT_keyboardFinish = function () {
-                self.dispatchEvent(new egret.Event("blur"));
                 if (self._multiline) {
                     self.isFinishDown = true;
                 }

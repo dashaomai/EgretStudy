@@ -370,21 +370,20 @@ var egret_h5_graphics;
         this._pushCommand(new Command(function (x, y, width, height) {
             var rendererContext = this.renderContext;
             this.canvasContext.save();
-            var _x = rendererContext._transformTx + x; //控制X偏移
-            var _y = rendererContext._transformTy + y; //控制Y偏移
+            var _x = rendererContext._transformTx + x + width / 2; //控制X偏移
+            var _y = rendererContext._transformTy + y + height / 2; //控制Y偏移
             var r = (width > height) ? width : height; //选宽高较大者做为arc半径参数
             var ratioX = width / r; //横轴缩放比率
             var ratioY = height / r; //纵轴缩放比率
+            r /= 2;
             this.canvasContext.scale(ratioX, ratioY); //进行缩放(均匀压缩)
             this.canvasContext.beginPath();
-            this.canvasContext.moveTo((_x + width) / ratioX, _y / ratioY);
             this.canvasContext.arc(_x / ratioX, _y / ratioY, r, 0, 2 * Math.PI);
             this.canvasContext.closePath();
             this.canvasContext.restore();
-            this.canvasContext.stroke();
         }, this, [x, y, width, height]));
         this._fill();
-        this.checkRect(x - width, y - height, 2 * width, 2 * height);
+        this.checkRect(x, y, width, height);
     }
     egret_h5_graphics.drawEllipse = drawEllipse;
     function lineStyle(thickness, color, alpha, pixelHinting, scaleMode, caps, joints, miterLimit) {

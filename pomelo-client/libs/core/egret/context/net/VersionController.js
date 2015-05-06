@@ -86,11 +86,11 @@ var egret;
                     var lastLocalVersionData = self.getData(self.localVersionDataPath, false);
                     if (lastLocalVersionData) {
                         for (var key in lastLocalVersionData) {
-                            egret_native.deleteUpdateFile(key);
+                            self.deleteFile(key);
                         }
                     }
-                    egret_native.deleteUpdateFile(self.localVersionDataPath);
-                    egret_native.deleteUpdateFile(self.localVersionCodePath);
+                    self.deleteFile(self.localVersionDataPath);
+                    self.deleteFile(self.localVersionCodePath);
                     self.loadOver();
                     return;
                 }
@@ -102,14 +102,14 @@ var egret;
                             self.localVersionData = {};
                         }
                         //删除版本号对比
-                        egret_native.deleteUpdateFile(self.localVersionCodePath);
+                        self.deleteFile(self.localVersionCodePath);
                         self.save(versionPath, JSON.stringify(appVersionJson));
                         //需要清理上个版本与当前版本不同的素材
                         var lastLocalVersionData = self.getData(self.localVersionCodePath, false);
                         if (lastLocalVersionData) {
                             for (var key in lastLocalVersionData) {
                                 if (lastLocalVersionData[key] != self.localVersionData[key]) {
-                                    egret_native.deleteUpdateFile(key);
+                                    self.deleteFile(key);
                                 }
                             }
                         }
@@ -118,7 +118,7 @@ var egret;
                         }
                         for (var key in self.localVersionData) {
                             if (lastLocalVersionData[key] != self.localVersionData[key]) {
-                                egret_native.deleteUpdateFile(key);
+                                self.deleteFile(key);
                             }
                         }
                         self.save(self.localVersionDataPath, JSON.stringify(self.localVersionData));
@@ -138,6 +138,11 @@ var egret;
                 self.save(self.localVersionDataPath, JSON.stringify(self.localVersionData));
             }
             self.loadCodeVersion();
+        };
+        __egretProto__.deleteFile = function (file) {
+            if (egret_native.deleteUpdateFile) {
+                egret_native.deleteUpdateFile(file);
+            }
         };
         //初始化本地版本控制号数据
         __egretProto__.loadCodeVersion = function () {
@@ -194,31 +199,58 @@ var egret;
             this.dispatchEvent(new egret.Event(egret.Event.COMPLETE));
         };
         __egretProto__.save = function (path, value) {
-            //egret_native.saveRecord(this.localVersionCodePath, JSON.stringify({"code" : this.newCode}));
-            egret_native.writeFileSync(path, value);
+            if (egret_native.writeFileSync) {
+                egret_native.writeFileSync(path, value);
+            }
+            else if (egret_native.saveRecord) {
+                egret_native.saveRecord(path, value);
+            }
         };
         __egretProto__.getData = function (filePath, isApp) {
-            if (isApp) {
-                var str = egret_native.readResourceFileSync(filePath);
-                return str != null ? JSON.parse(str) : null;
+            if (egret_native.readUpdateFileSync && egret_native.readResourceFileSync) {
+                if (isApp) {
+                    var str = egret_native.readResourceFileSync(filePath);
+                    return str != null ? JSON.parse(str) : null;
+                }
+                else {
+                    var str = egret_native.readUpdateFileSync(filePath);
+                    return str != null ? JSON.parse(str) : null;
+                }
             }
             else {
-                var str = egret_native.readUpdateFileSync(filePath);
-                return str != null ? JSON.parse(str) : null;
+                return this.getLocalDataByOld(filePath);
             }
         };
         __egretProto__.getLocalData = function (filePath) {
-            //先取更新目录
-            var content = egret_native.readUpdateFileSync(filePath);
-            if (content != null) {
-                return JSON.parse(content);
+            if (egret_native.readUpdateFileSync && egret_native.readResourceFileSync) {
+                //先取更新目录
+                var content = egret_native.readUpdateFileSync(filePath);
+                if (content != null) {
+                    return JSON.parse(content);
+                }
+                //再取资源目录
+                content = egret_native.readResourceFileSync(filePath);
+                if (content != null) {
+                    return JSON.parse(content);
+                }
+                return null;
             }
-            //再取资源目录
-            content = egret_native.readResourceFileSync(filePath);
-            if (content != null) {
-                return JSON.parse(content);
+            else {
+                return this.getLocalDataByOld(filePath);
             }
-            return null;
+        };
+        //todo 旧方式
+        __egretProto__.getLocalDataByOld = function (filePath) {
+            var data = null;
+            if (egret_native.isRecordExists(filePath)) {
+                var str = egret_native.loadRecord(filePath);
+                data = JSON.parse(str);
+            }
+            else if (egret_native.isFileExists(filePath)) {
+                var str = egret_native.readFileSync(filePath);
+                data = JSON.parse(str);
+            }
+            return data;
         };
         /**
          * 获取所有有变化的文件

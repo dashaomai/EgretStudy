@@ -659,7 +659,12 @@ var egret;
         __egretProto__._draw = function (renderContext) {
             var self = this;
             var properties = self._properties;
-            if (properties._textMaxWidth == 0 && properties._type != egret.TextFieldType.INPUT) {
+            if (properties._type == egret.TextFieldType.INPUT) {
+                if (self._isTyping) {
+                    return;
+                }
+            }
+            else if (properties._textMaxWidth == 0) {
                 return;
             }
             _super.prototype._draw.call(this, renderContext);
@@ -769,7 +774,7 @@ var egret;
             self._isArrayChanged = false;
             var text2Arr = self._textArr;
             var renderContext = egret.MainContext.instance.rendererContext;
-            self._linesArr = [];
+            self._linesArr.length = 0;
             properties._textMaxHeight = 0;
             properties._textMaxWidth = 0;
             //宽度被设置为0
@@ -892,11 +897,6 @@ var egret;
         __egretProto__.drawText = function (renderContext) {
             var self = this;
             var properties = self._properties;
-            if (properties._type == egret.TextFieldType.INPUT) {
-                if (self._isTyping) {
-                    return;
-                }
-            }
             //先算出需要的数值
             var lines = self._getLinesArr();
             if (properties._textMaxWidth == 0) {

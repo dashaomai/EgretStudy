@@ -506,6 +506,7 @@ declare module egret {
         private _load;
         fetchVersion(): void;
         private initLocalVersionData();
+        private deleteFile(file);
         private loadCodeVersion();
         private loadBaseVersion(neesUpdate);
         private loadBaseOver();
@@ -517,6 +518,7 @@ declare module egret {
         private save(path, value);
         private getData(filePath, isApp);
         private getLocalData(filePath);
+        private getLocalDataByOld(filePath);
         /**
          * 获取所有有变化的文件
          * @returns {Array<any>}
@@ -651,7 +653,7 @@ declare module egret_native {
 
     function saveRecord(filepath:string, fileContent:string):void;
 
-    function getOption(type:string):any;
+    function getOption(type:string):string;
 
     module Audio {
         function preloadBackgroundMusic(path:string):void;

@@ -403,15 +403,18 @@ var egret;
                 return this._alpha;
             },
             set: function (value) {
-                if (egret.NumberUtils.isNumber(value) && this._alpha != value) {
-                    this._alpha = value;
-                    this._setDirty();
-                    this._setCacheDirty();
-                }
+                this._setAlpha(value);
             },
             enumerable: true,
             configurable: true
         });
+        __egretProto__._setAlpha = function (value) {
+            if (egret.NumberUtils.isNumber(value) && this._alpha != value) {
+                this._alpha = value;
+                this._setDirty();
+                this._setCacheDirty();
+            }
+        };
         Object.defineProperty(__egretProto__, "skewX", {
             /**
              * 表示DisplayObject的x方向斜切
@@ -662,8 +665,7 @@ var egret;
                 return false;
             }
             var bounds = display.getBounds(egret.Rectangle.identity);
-            var texture_scale_factor = egret.MainContext.instance.rendererContext._texture_scale_factor;
-            if (display._cacheDirty || display._texture_to_render == null || Math.round(bounds.width) != Math.round(display._texture_to_render._sourceWidth * texture_scale_factor) || Math.round(bounds.height) != Math.round(display._texture_to_render._sourceHeight * texture_scale_factor)) {
+            if (display._cacheDirty || display._texture_to_render == null || bounds.width - display._texture_to_render._textureWidth > 1 || bounds.height - display._texture_to_render._textureHeight > 1) {
                 var cached = display._makeBitmapCache();
                 display._cacheDirty = !cached;
             }

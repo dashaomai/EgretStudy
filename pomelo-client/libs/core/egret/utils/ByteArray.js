@@ -282,11 +282,11 @@ var egret;
          * @return UTF-8 编码的字符串
          * @method egret.ByteArray#readMultiByte
          */
-        __egretProto__.readMultiByte = function (length, charSet) {
-            if (!this.validate(length))
-                return null;
-            return "";
-        };
+        //public readMultiByte(length:number, charSet?:string):string {
+        //    if (!this.validate(length)) return null;
+        //
+        //    return "";
+        //}
         /**
          * 从字节流中读取一个带符号的 16 位整数
          * @return 介于 -32768 和 32767 之间的 16 位带符号整数

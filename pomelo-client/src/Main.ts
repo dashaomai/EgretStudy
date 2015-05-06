@@ -176,7 +176,7 @@ class Main extends egret.DisplayObjectContainer {
 
                 pomelo.request(
                     'gate.queryHandler.queryConnector',
-                    {username: 'Bob Jiang', password: '123456', token: 'aaabbb'},
+                    {username: 'Bob Jiang 2', password: '123456', token: 'aaaccc'},
                     function (response:any):void {
                         if (response.code !== 200)
                             return;
@@ -192,6 +192,7 @@ class Main extends egret.DisplayObjectContainer {
                             if (response.code !== 200)
                                 return;
 
+                            // 登入游戏
                             pomelo.request(
                                 'connector.entryHandler.entry',
                                 {id: id},
@@ -200,8 +201,21 @@ class Main extends egret.DisplayObjectContainer {
                                         return;
 
                                     egret.Logger.info('到 connector 的请求已返回：' + JSON.stringify(response.player));
+
+                                    // 请求更换队伍
+                                    pomelo.request(
+                                        'game.teamHandler.formation',
+                                        {id: 2, team: [1001, 1003, 1005, 1007]},
+                                        function(response:any):void {
+                                            if (response.code !== 200) {
+                                                egret.Logger.info(response.error);
+                                            }
+
+                                            egret.Logger.info('成功更换冒险者队伍');
+                                        }
+                                    )
                                 }
-                            )
+                            );
                         });
                     }
                 );

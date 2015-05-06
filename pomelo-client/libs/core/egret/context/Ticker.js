@@ -27,7 +27,7 @@
 var egret;
 (function (egret) {
     /**
-     * Ticker是egret引擎的心跳控制器，是游戏唯一的时间处理入口。开发者务必不要使用Ticker,应该使用egret.Timer。
+     * Ticker是egret引擎的心跳控制器，是游戏唯一的时间处理入口。
      */
     var Ticker = (function (_super) {
         __extends(Ticker, _super);

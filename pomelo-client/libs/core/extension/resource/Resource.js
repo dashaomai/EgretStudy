@@ -585,6 +585,7 @@ var RES;
                     item.loaded = false;
                     var analyzer = this.getAnalyzerByType(item.type);
                     analyzer.destroyRes(item.name);
+                    this.removeLoadedGroupsByItemName(item.name);
                 }
                 return true;
             }
@@ -595,7 +596,26 @@ var RES;
                 item = this.resConfig.getRawResourceItem(name);
                 item.loaded = false;
                 analyzer = this.getAnalyzerByType(type);
-                return analyzer.destroyRes(name);
+                var result = analyzer.destroyRes(name);
+                this.removeLoadedGroupsByItemName(item.name);
+                return result;
+            }
+        };
+        __egretProto__.removeLoadedGroupsByItemName = function (name) {
+            var loadedGroups = this.loadedGroups;
+            var loadedGroupLength = loadedGroups.length;
+            for (var i = 0; i < loadedGroupLength; i++) {
+                var group = this.resConfig.getRawGroupByName(loadedGroups[i]);
+                var length = group.length;
+                for (var j = 0; j < length; j++) {
+                    var item = group[j];
+                    if (item.name == name) {
+                        loadedGroups.splice(i, 1);
+                        i--;
+                        loadedGroupLength = loadedGroups.length;
+                        break;
+                    }
+                }
             }
         };
         /**
