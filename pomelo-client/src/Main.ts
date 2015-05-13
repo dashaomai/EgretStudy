@@ -213,6 +213,18 @@ class Main extends egret.DisplayObjectContainer {
 
                                             egret.Logger.info('成功更换冒险者队伍');
                                         }
+                                    );
+
+                                    // 进行一次迷宫探险任务
+                                    pomelo.request(
+                                        'maze.taskHandler.begin',
+                                        {teamId: 2, mazeId: 11, consumableAmount: 100, medicineAmount: 50, reviveAmount: 50, type: 1},
+                                        function(response:any):void {
+                                            if (response.code !== 200)
+                                                egret.Logger.info(response.error);
+
+                                            egret.Logger.info('成功进行了一次探险');
+                                        }
                                     )
                                 }
                             );
