@@ -150,6 +150,7 @@ class Main extends egret.DisplayObjectContainer {
         // 访问 Pomelo API
 
         var host:string = "iojs.clevercells.com";
+        //var host:string = "192.168.2.54";
         var port:string = "3010";
 
         var pomelo:Pomelo;
@@ -224,8 +225,52 @@ class Main extends egret.DisplayObjectContainer {
                                                 egret.Logger.info(response.error);
 
                                             egret.Logger.info('成功进行了一次探险');
+
+                                            pomelo.request(
+                                                'maze.taskHandler.get',
+                                                {taskId: response.taskId},
+                                                function(response:any):void {
+                                                    if (response.code !== 200)
+                                                        egret.Logger.info(response.error);
+
+                                                    egret.Logger.info('成功获得任务内容：' + response.isFinished + response.steps);
+                                                }
+                                            );
                                         }
-                                    )
+                                    );
+
+                                    // 列出当前所有的迷宫探险任务
+                                    pomelo.request(
+                                        'maze.taskHandler.list',
+                                        {},
+                                        function(response:any):void {
+                                            if (response.code !== 200)
+                                                egret.Logger.info(response.error);
+
+                                            egret.Logger.info('成功获取任务列表：' + JSON.stringify(response));
+
+                                            var tasks:any[] = response.tasks;
+                                            var task:any;
+                                            for (var i:number = 0, m:number = tasks.length; i<m; i++) {
+                                                task = tasks[i];
+
+                                                if (task.isFinished) {
+                                                    pomelo.request(
+                                                        'maze.taskHandler.finish',
+                                                        {taskId: task.id},
+                                                        function(response:any):void {
+                                                            if (response.code !== 200)
+                                                                egret.Logger.info(response.error);
+
+                                                            egret.Logger.info('成功完成任务：' + JSON.stringify(response));
+                                                        }
+                                                    );
+
+                                                    break;
+                                                }
+                                            }
+                                        }
+                                    );
                                 }
                             );
                         });
